@@ -9,36 +9,38 @@ body {
     color: black;
   }
 }
-
+/*
+@media screen, (max-width: 400px) {
+	body {
+		background-color: blue;
+		color: red;
+	}
+}
+*/
 @media screen and (max-width: 400px) {
   body {
     background-color: blue;
     color: red;
   }
 }
-
 @media screen and (orientation: portrait) {
   body {
     background-color: yellow;
   }
 }
-
 .main {
   background-color: red;
 }
-
 @media screen and (min-width: 300px) {
   .main {
     background-color: yellow;
   }
 }
-
 @media screen and (min-width: 700px) {
   .main {
     background-color: blue;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .main {
     background-color: purple;
@@ -48,19 +50,16 @@ body {
 .header {
   background-color: red;
 }
-
 @media screen and (min-width: 300px) {
   .header {
     background-color: teal;
   }
 }
-
 @media screen and (min-width: 700px) {
   .header {
     background-color: tomato;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .header {
     background-color: pink;
@@ -70,19 +69,15 @@ body {
 .article {
   background-color: yellow;
   -webkit-transform: uppercase;
-  -ms-transform: uppercase;
-  transform: uppercase;
+          transform: uppercase;
 }
-
 @media screen and (min-width: 400px) {
   .article {
     background-color: brown;
     -webkit-transform: lowercase;
-    -ms-transform: lowercase;
-    transform: lowercase;
+            transform: lowercase;
   }
 }
-
 @media screen and (min-width: 800px) {
   .article {
     background-color: blue;

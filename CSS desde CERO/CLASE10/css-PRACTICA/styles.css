@@ -1,0 +1,41 @@
+body {
+  color: red;
+  background: teal;
+}
+
+div p {
+  background: red;
+  color: white;
+}
+
+p span {
+  background: yellow;
+}
+
+h1 {
+  width: 300px;
+  background: teal;
+}
+
+.menu {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  background: tomato;
+  color: teal;
+}
+
+.sociales, main > footer {
+  line-height: 2em;
+  color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn_main {
+  display: inline-block;
+  width: 50px;
+  color: white;
+}
