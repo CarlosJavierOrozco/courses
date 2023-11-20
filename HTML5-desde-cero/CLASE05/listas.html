@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Listas HTML</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximun-scale=1">
+        <style>
+            body {
+                padding-bottom: 15em;
+            }
+        </style>
+    </head>
+    <body>
+       <h1>Listas HTML</h1>
+       <section>
+          <!-- Existen tres tipos de listas en HTML:
+              <ol></ol> (ordered list)
+              <ul></ul> (unordered list)
+              <dl></dl> (definition list)
+              
+              <ul></ul> y <ol></ol> son contenedores de listas. Y cada item de la lista se indica con <li></li> (list item).
+            --> 
+            <h2>Listas ol y ul</h2>
+            <ol>
+                <li>Lunes</li>
+                <li>Martes</li>
+                <li>Miércoles</li>
+            </ol>
+            <ul>
+                <li>Lunes</li>
+                <li>Martes</li>
+                <li>Miércoles</li>
+            </ul>
+       </section>
+       
+       <section>
+          <!-- 
+          Pueden anidarse listas (es decir, una dentro de otra) sin limite. Incluso se pueden combinar <ol></ol> y <ul></ul>.
+          
+          Para hacerlo, la lista hija debe estar dentro de un <li></li>, y justo antes de la etiqueta de cierre </li>
+          -->
+           <h2>Listas anidadas</h2>
+           <ol>
+                <li>Lunes
+                    <ul>
+                        <li>Llevar al perro al veterinario</li>
+                        <li>Visitar a mi dentista</li>
+                    </ul>
+                </li>
+                <li>Martes
+                    <ul>
+                        <li>Presentar el proyecto del instituto</li>
+                        <li>Llevar la ropa a la lavandería</li>
+                    </ul>
+                </li>
+                <li>Miércoles
+                    <ul>
+                        <li>Clase de HTML5</li>
+                    </ul>
+                </li>
+            </ol>
+       </section>
+        <section>
+           <!-- Para ol
+             type="1|a|A|i|I"
+             start="numero" (indica en que número comienza la numeración)
+             reversed (atributo vacío)
+             -->
+            <h2>Atributos de las listas ol y ul</h2>
+            <ol type="1" start="10" reversed>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+            </ol>
+            
+            <!-- Para ul 
+            type="disc|circle|square"
+            -->
+            <ul type="square">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+            </ul>
+        </section>
+        
+        <section>
+           <!-- 
+           <dl></dl> es un contenedor de elementos en pares:
+               <dt></dt> (definition term)
+               <dd></dd> (definition description)
+           Este tipo de listas es útil en glosarios, diccionarios, enciclopedias.
+           
+           <dl>
+               <dt></dt>
+               <dd></dd>
+               
+               <dt></dt>
+               <dd></dd>
+               
+               <dt></dt>
+               <dd></dd>
+           </dl>
+           
+           -->
+            <h2>Listas de definición dl</h2>
+            <dl>
+                <dt>HTML</dt>
+                <dd>Lenguaje de marcado de hipertexto</dd>
+                
+                <dt>CSS</dt>
+                <dd>Hojas de estilo en cascada</dd>
+                
+                <dt>JavaScript</dt>
+                <dd>Lenguaje de programación del lado del cliente</dd>
+            </dl>
+        </section>
+        
+        <section>
+           <!-- 
+           <details></details> y <summary></summary> son etiquetas de html5 todavia en desarrollo (no soportadas completamente por los navegadores).
+           Permiten tener un "acordeon" de definicion y descripción.
+           -->
+            <h2>Details y summary</h2>
+            <details>
+                <summary>HTML5</summary>
+                <p>Hypertext Language Markup</p>
+            </details>
+        </section>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
