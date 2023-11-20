@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    overflow: hidden;
+    background-color: teal;
+    max-width: 662px;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+.skew{
+    flex: 1;
+    width: 100px;
+    height: 250px;
+    transform: skew(-20deg);
+    transition: all .5s;
+    border-right: 6px solid whitesmoke;
+    overflow: hidden;
+    position: relative;
+}
+
+.skew p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    margin: 0;
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    transform: translate(-50%, -50%) skew(20deg);
+}
+
+.skew img{
+    height: 100%;
+    transform: skew(20deg);
+    position: relative;
+    left: -50px;
+}
+
+
+.skew:hover {
+    flex-grow: 5;
+    font-size: 3em;
+    text-transform: uppercase;
+}

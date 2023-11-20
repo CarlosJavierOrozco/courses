@@ -1,0 +1,103 @@
+
+body{
+	background-color: black;
+	color: white;
+}
+
+
+@media print {
+	body {
+		background-color: white;
+		color: black;}
+}
+
+// condiciones 
+
+// de 400 px para arriba se aplica esa regla.
+// min-width: 400px // a partir de los 400
+
+// hasta los 400 px se aplica la regla
+// max-width: 400px // hasta los 400
+
+// para definir el operadora logico o se coloca una coma. 
+
+/*
+@media screen, (max-width: 400px) {
+	body {
+		background-color: blue;
+		color: red;
+	}
+}
+*/
+
+@media screen and (max-width: 400px) {
+	body {
+		background-color: blue;
+		color: red;
+	}
+}
+
+// las orientacion se puede cambiar asi: 
+
+@media screen and (orientation: portrait) {
+	body{
+		background-color: yellow;
+	}
+}
+
+.main{
+	background-color: red ;
+
+	@media screen and (min-width: 300px) {
+		background-color: yellow;
+	}
+
+	@media screen and (min-width: 700px) {
+		background-color: blue;
+
+		}
+	@media screen and (min-width: 1000px) {
+		background-color: purple;
+
+	}
+}
+
+.header{
+	background-color: red ;
+	@media screen and (min-width: 300px) {
+
+		background-color: teal;}
+
+
+	@media screen and (min-width: 700px) {
+
+		background-color: tomato;}
+
+	@media screen and (min-width: 1000px) {
+
+		background-color: pink;
+
+	}
+}
+
+// mixin para media querys
+
+@mixin bp($size){
+	@media screen and (min-width: $size) {
+		@content;
+	}
+}
+
+
+.article {
+	background-color: yellow;
+	transform: uppercase;
+	@include bp(400px){
+		background-color: brown;
+		transform: lowercase;
+	}
+	@include bp(800px){
+		background-color: blue;
+		font-size: 30px;
+	}
+}

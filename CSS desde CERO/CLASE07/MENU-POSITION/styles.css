@@ -1,0 +1,40 @@
+.main-menu{
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style:none;
+	display: table;
+	background-color: teal;
+
+}
+
+.main-menu__item{
+	float: left;
+}
+
+.main-menu__item:hover{
+	background-color: rgba(0,0,0,.3);
+}
+
+.main-menu__link{
+	text-decoration: none;
+	color: white;
+	line-height: 2.5em;
+	padding: 0 1em;
+
+}
+
+.main-menu--child{
+	position: absolute;
+	display: none;
+}
+
+.main-menu__item--child{
+
+	float: none;
+
+}
+
+.main-menu__item:hover > .main-menu--child{
+	display: block;
+}

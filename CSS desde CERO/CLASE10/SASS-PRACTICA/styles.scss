@@ -1,0 +1,73 @@
+@import "components/var";
+body{
+	color: $color;
+	background: $bg-color;
+}
+
+div {
+	p{
+		background: $color;
+		color: white;
+	}
+}
+
+// referencia al PADRE
+p {
+	& span{
+		background: yellow;
+	}
+}
+
+h1 {
+	width: $width;
+	background: teal;
+}
+
+
+// ejemplo de mixin
+// podria importarlo mejor... 
+
+@mixin reset-menu($clr,$bg){
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	list-style: none;
+	background: $bg;
+	color: $clr;
+}
+
+
+.menu {
+	@include reset-menu(teal,tomato);
+}
+
+//extend y placeholder
+
+.sociales {
+	line-height:2em;
+	color: red;
+	display: flex; 
+}
+
+main {
+
+	& > footer {
+		@extend .sociales;
+	}
+
+}
+
+//placeholder 
+
+%button {
+	display: inline-block;
+	width: 50px;
+	color: white;
+}
+
+
+.btn_main {
+	@extend %button;
+}
+
+
