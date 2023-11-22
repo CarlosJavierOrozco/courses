@@ -1,5 +1,5 @@
 extends template
-
+include mixin
 
 block main
   //apend y prepend añardir antes o despues del contenido
@@ -57,3 +57,4 @@ block main
   //- each valor, llave in objeto
   //-   p= `${llave} : ${valor}`
       
+  +link("/enlace", "enlace")
