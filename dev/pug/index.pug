@@ -8,6 +8,14 @@ html(lang="en")
       h1{
         color: red;
       }
+
+      .registrado{
+        color: violet;
+      }
+
+      .NoRegistrado{
+        color: darkred;
+      }
   body 
     h1 welcome
     div container 1
@@ -38,3 +46,20 @@ html(lang="en")
     // forma nueva template strings
 
     p= `El administrado del sitio web es ${name}`
+
+    //condicionales
+
+    //-const existe = "no exite"
+
+    if existe
+      p es verdadero 
+    else
+      p no es verdadero
+
+    //operdaro ternario
+
+    //-const user = "CarlosJOrozco"
+    
+    // unles user === if !user
+    
+    p(class= user ? "registrado" : "NoRegistrado") Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolor expedita suscipit illo perferendis recusandae a animi, totam at culpa est sapiente magnam deserunt, neque quisquam officia eum ratione. Quas.
