@@ -63,3 +63,13 @@ html(lang="en")
     // unles user === if !user
     
     p(class= user ? "registrado" : "NoRegistrado") Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolor expedita suscipit illo perferendis recusandae a animi, totam at culpa est sapiente magnam deserunt, neque quisquam officia eum ratione. Quas.
+
+    - const ancianos = ["Jhon","Darwin","Ivan"]
+
+    each anciano in ancianos
+      p= anciano
+
+    //- each valor, llave in objeto
+    //-   p= `${llave} : ${valor}`
+
+    
