@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title pug
+    style.
+      h1{
+        color: red;
+      }
+  body 
+    h1 welcome
+    div container 1
+    div container 2
+
+    ul
+    li item 1
+
+    // se puede separar con coma
+    a(href="#" target="_BLANC") ir
+
+    //# ID
+    //. CLASES
+
+    p Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    | Omnis veniam non facilis placeat iusto itaque eaque, laboriosam ipsum quos aut tenetur unde quisquam quae nostrum explicabo cupiditate ipsa quam reiciendis.
+
+    // para evitar indentar mucho se puede usar los dos puntos (:)
+
+    ul: li: a(href="#") item 2
+
+    -const name = "Carlos J. Orozco"
+
+    //forma clasica - Legacy
+    p El administrado del sitio web es 
+      span #{name}
+
+    // forma nueva template strings
+
+    p= `El administrado del sitio web es ${name}`
