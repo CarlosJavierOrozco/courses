@@ -1,0 +1,14 @@
+block var 
+  include var
+doctype html
+html 
+  head 
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    title #{titulo}
+    link(rel="stylesheet", href="css/style.css")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", href="img/favicon.png", type="image/x-icon") 
+  body
+    block header
+    h1 Ejercicios
+    block main
