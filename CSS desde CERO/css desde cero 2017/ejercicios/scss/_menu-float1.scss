@@ -1,0 +1,50 @@
+.menu,
+.menu ul{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.menu{
+    background-color: #333;
+    display: table;
+    color: #eee;
+
+    & a{
+        display: block;
+        line-height: 2;
+        padding: .5em 1em;
+        white-space: nowrap;
+    }
+
+    & li > ul {
+        display: none;
+        position: absolute;
+        background-color: #444;
+    }
+
+    & > li {
+        float: left;
+    }
+
+    & li{
+        position: relative;
+    }
+
+    & li:hover > ul{
+        display: block;
+    }
+
+
+    & ul ul {
+        top: 0;
+        left: 100%;
+        background-color: #222;
+    }
+
+}
+
+body{
+    padding-bottom: 80em;
+}
