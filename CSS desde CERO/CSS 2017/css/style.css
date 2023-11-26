@@ -398,3 +398,42 @@ body {
   -ms-grid-column-span: 1;
   grid-column-end: 4;
 }
+
+.luffy-scale-container {
+  width: 450px;
+  height: 250px;
+  background-image: url("/img/luffy1.jpg");
+  background-size: cover;
+  border: 1px solid black;
+  margin: auto;
+  position: relative;
+}
+.luffy-scale-container::before {
+  content: "Luffy Kun";
+  background-color: rgba(215, 178, 178, 0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #a30000;
+  font-size: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.luffy-scale-container:hover::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
