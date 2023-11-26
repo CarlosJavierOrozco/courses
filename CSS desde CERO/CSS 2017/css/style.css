@@ -195,3 +195,91 @@ body {
 .layout-footer a {
   margin: 2em;
 }
+
+.flex-menu,
+.flex-menu ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.flex-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #333;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: whitesmoke;
+  width: 50%;
+}
+.flex-menu a {
+  display: block;
+  padding: 1em;
+  white-space: nowrap;
+}
+.flex-menu li > ul {
+  background-color: #444;
+  display: none;
+}
+.flex-menu ul li {
+  position: relative;
+}
+.flex-menu ul ul {
+  background-color: #333;
+  top: 0;
+  left: 100%;
+}
+.flex-menu li:hover > ul {
+  display: block;
+}
+
+.flex-menu ul {
+  position: absolute;
+}
+
+.banner-animado {
+  width: 80%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+.banner-animado__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30px;
+          flex: 1 1 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #4dc3c3;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.banner-animado__item:hover {
+  -webkit-box-flex: 10;
+      -ms-flex: 10 0 auto;
+          flex: 10 0 auto;
+}
+.banner-animado__item:hover span {
+  -webkit-transform: none;
+          transform: none;
+}
+.banner-animado__item:nth-child(2) {
+  background-color: #2aeb8b;
+}
+.banner-animado__item:nth-child(3) {
+  background-color: #83269f;
+}
+.banner-animado__item:nth-child(4) {
+  background-color: #65ea4a;
+}
+.banner-animado__item span {
+  margin: auto;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
