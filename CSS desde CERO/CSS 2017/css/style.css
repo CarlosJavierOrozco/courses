@@ -471,3 +471,33 @@ body {
   -webkit-transform: scale(5);
           transform: scale(5);
 }
+
+.corazon {
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  position: relative;
+}
+.corazon::after, .corazon::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 50%;
+  background-color: red;
+  border-radius: 50% 50% 0 0;
+}
+.corazon::after {
+  left: 50%;
+  -webkit-transform: rotate(-47deg);
+          transform: rotate(-47deg);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+.corazon::before {
+  right: 50%;
+  -webkit-transform: rotate(47deg);
+          transform: rotate(47deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}

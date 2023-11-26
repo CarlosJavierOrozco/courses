@@ -1,0 +1,30 @@
+$rotate : 47deg;
+.corazon{
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    position: relative;
+
+    &::after,
+    &::before{
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 50%;
+        background-color: red;
+        border-radius: 50% 50% 0 0;
+
+    }
+    &::after{
+        left: 50%;
+        transform: rotate(-$rotate);
+        transform-origin: bottom left;
+    }
+    &::before{
+        right: 50%;
+        transform: rotate($rotate);
+        transform-origin: bottom right;
+    }
+
+}
