@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Geolocalización en API HTML5</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <style>
+            #mapa {
+                width: 100%;
+                height: 450px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="titulo">Ejemplo de Geolocalizacion</h1>
+        <button id="boton">¿Dónde estoy?</button>
+        <div id="mapa"></div>
+        <!-- 
+        API (Application Programming Interface) es un conjunto de métodos, propiedades y patrones que permiten desarrollar aplicaciones basadas en otras (o en otro lenguaje).
+        En el caso de HTML5, la api es el conjunto de propiedades, métodos y eventos. 
+
+        1. Elementos HTML
+        2. DOM (Document Object Model)
+        3. BOM (Browser Object Model)
+        -->
+        <!--<script src="api.js"></script>-->
+        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script src="geolocation.js"></script>
+    </body>
+</html>
