@@ -1,0 +1,60 @@
+extends template
+include mixin
+
+block main
+  //apend y prepend añardir antes o despues del contenido
+  h1 welcome
+  div container 1
+  div container 2
+
+  ul
+    li item 1
+
+  // se puede separar con coma
+
+  a(href="#" target="_BLANC") ir
+
+  //# ID
+  //. CLASES
+
+  p Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  | Omnis veniam non facilis placeat iusto itaque eaque, laboriosam ipsum quos aut tenetur unde quisquam quae nostrum explicabo cupiditate ipsa quam reiciendis.
+
+  // para evitar indentar mucho se puede usar los dos puntos (:)
+
+  ul: li: a(href="#") item 2
+
+  //forma clasica - Legacy
+  p El administrado del sitio web es 
+    span #{name}
+
+  // forma nueva template strings
+
+  p= `El administrado del sitio web es ${name}`
+
+  //condicionales
+
+  //-const existe = "no exite"
+
+  if existe
+    p es verdadero 
+  else
+    p no es verdadero
+
+  //operdaro ternario
+
+  //-const user = "CarlosJOrozco"
+      
+  // unles user === if !user
+      
+  p(class= user ? "registrado" : "NoRegistrado") Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolor expedita suscipit illo perferendis recusandae a animi, totam at culpa est sapiente magnam deserunt, neque quisquam officia eum ratione. Quas.
+
+  - const ancianos = ["Jhon","Darwin","Ivan"]
+
+  each anciano in ancianos
+    p= anciano
+
+  //- each valor, llave in objeto
+  //-   p= `${llave} : ${valor}`
+      
+  +link("/enlace", "enlace")
