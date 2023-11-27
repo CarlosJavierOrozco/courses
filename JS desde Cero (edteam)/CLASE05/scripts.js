@@ -26,8 +26,7 @@ dameLaTalla();
 
 
 // al parecer no funciona el preventDefault
-function blockClick(){
-  
+function blockClick(){  
 // añadiendo esto prevengo  
   addEventListener('contextmenu',function(event){
     event.preventDefault();
