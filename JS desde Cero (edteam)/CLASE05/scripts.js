@@ -41,3 +41,27 @@ blockClick();
 document.getElementById("myAnchor").addEventListener("click", function(event){
   event.preventDefault()
 });
+
+
+
+// PROGRAMA DE DIBUJO HTML
+
+function dibujar(){
+  let dibujo = function(e){
+    let punto = document.createElement('div');
+        punto.classList.add('punto');
+        punto.style.left = (e.pageX - 10) + "px";
+        punto.style.top = (e.pageY - 10) + "px";
+        document.body.appendChild(punto);
+
+  };
+
+  window.addEventListener('mousedown',function(){
+    addEventListener('mousemove', dibujo);
+    addEventListener('mouseup',function(){
+      removeEventListener('mousemove', dibujo);
+    })
+  })
+}
+
+dibujar();
