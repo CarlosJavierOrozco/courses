@@ -15,7 +15,6 @@ function dameLaHora(){
 dameLaHora();
 
 function dameLaTalla(){
-
   addEventListener('resize',function(){
     let width = innerWidth;
     let height = innerHeight;
@@ -24,3 +23,22 @@ function dameLaTalla(){
 }
 
 dameLaTalla();
+
+
+// al parecer no funciona el preventDefault
+function blockClick(){
+  
+// añadiendo esto prevengo  
+  addEventListener('contextmenu',function(event){
+    event.preventDefault();
+  });
+}
+
+blockClick();
+
+
+// en este ejemplo si funciona, no se porque.
+
+document.getElementById("myAnchor").addEventListener("click", function(event){
+  event.preventDefault()
+});
