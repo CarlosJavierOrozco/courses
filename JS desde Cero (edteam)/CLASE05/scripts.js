@@ -65,3 +65,14 @@ function dibujar(){
 }
 
 dibujar();
+
+
+function jugar(){
+  addEventListener('keydown',function(e){
+    if (e.ctrlKey === true && e.altKey === true && e.which === 89) {
+      alert('Bienvenido al Juego');
+    }
+  })
+}
+
+jugar();
