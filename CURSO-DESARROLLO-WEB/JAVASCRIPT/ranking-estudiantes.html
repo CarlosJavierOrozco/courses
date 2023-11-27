@@ -1,0 +1,79 @@
+<!-- Crea una página web que permita al usuario introducir el nombre, apellido y grado de los estudiantes. Los detalles deben ser guardados en un array multidimensional cuando el usuario pincha en el botón Add(Añadir) y los detalles de todos los estudiantes deben ser mostrados cuando se pincha el botón Retrieve (Recuperar).
+ -->
+
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<title>Base de Datos Estudiantes</title>
+		<script>
+		var studArray = new Array();
+		var id=1;
+		
+		function students(fName, lName, rank){
+			
+			this.fName = fName;
+			this.lName = lName;
+			this.rank = rank;
+			this.fullName = function(){
+								var fullName = this.fName + " " + this.lName;
+								return fullName;
+							}
+							
+			this.addStudent = function(fullName){
+								studArray[id] = new Array(fullName, this.rank);
+								id = id+1;
+								}
+							}
+							
+						
+		function addStudents(){
+		
+			var first = document.getElementById('fName').value;
+			var second = document.getElementById('lName').value;
+			var rank = document.getElementById('rank').value;
+			var student1 = new students(first,second,rank);
+			var full = student1.fullName();
+			
+			student1.addStudent(full);
+			alert("Haz añadido los datos correctamente!");
+			document.getElementById('fName').value =" ";
+			document.getElementById('lName').value =" ";
+			document.getElementById('rank').value = " ";
+		}
+		
+		
+		function retrieveStudents(){
+			var output ="";
+			for(var i=1;i<studArray.length;i++){
+				output = output + "Estudiante N°" + i + "<br/>";
+				for (var j=0;j<2;j++){
+					if (j==0)
+					output = output + "Nombre: " + studArray[i][j] + "<br/>";
+					else
+					output = output + "Rank: " + studArray[i][j] + "<br/>";
+				}
+				output = output + "<br/>";
+			}
+			document.getElementById('result').innerHTML = output;
+		}
+		</script>
+	</head>
+	<body>
+		<label for="fName">Nombres:</label>		
+		<input type="text" id="fName" /><br/>
+		
+		<label for="lName">Apellidos:</label>
+		<input type="text" id="lName" /><br/>
+		
+		<label for="rank">Rank:</label>
+		<input type="text" id="rank" /> <br/>
+	
+		<input type="button" id="btnAdd" value ="Añadir" onclick="addStudents();"/>
+		
+		<input type="button" id="btnRetrieve" value ="Ver Ranking" onclick="retrieveStudents();"/>
+		
+		<div id="result"></div>
+	</body>
+</html>

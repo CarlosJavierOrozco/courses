@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Login Basico</title>
+</head>
+<body>
+	
+	
+	
+	
+	<script type="text/javascript">
+		
+		var registro = prompt("No estas registrado, registrate primero para poder acceder al sitio web");
+		
+		function succes(){
+		
+			document.write("<h1>Bienvenido "+userName+"</h1>");
+			document.write("Exito! estas en el area de Registrado.");
+			
+		}
+		function fail(){
+			document.write("No estas registrado.");
+		}
+		
+		if(registro==""){
+			prompt("Por favor escribe algo")
+			
+			
+		}else{
+			
+			var userName = prompt("Te haz restrado con el nombre " + registro);
+			
+			if(userName == registro){
+				succes();
+			}else{
+				fail();
+			}
+			
+		}
+		
+		
+	</script>
+	
+	
+</body>
+</html>

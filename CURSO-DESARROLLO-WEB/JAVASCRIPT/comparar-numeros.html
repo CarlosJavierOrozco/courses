@@ -1,0 +1,29 @@
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<title>Comparar Numeros</title>
+	<script type="text/javascript">
+	
+		var num1 = parseInt(prompt("Numero uno:"));
+		
+		var num2 = parseInt(prompt("Numero dos:"));
+		
+		var mensaje;
+		
+		document.write("Numero uno: " + num1 + "<br/>");
+		document.write("Numero dos: " + num2 + "<br/>");
+		
+		if (num1 == num2)
+			mensaje = num1 + " y " + num2 + " son iguales.";
+		
+		else if (num1 > num2)
+			mensaje = "El " + num1 + " es mas grande que el numero " + num2 + ".";
+		else
+			mensaje = "El " + num1 + " es menor que el numero " + num2 + ".";
+			
+		document.write(mensaje);
+	</script>
+</head>
+
+<body></body>
+</html>

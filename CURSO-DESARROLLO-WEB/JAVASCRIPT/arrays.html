@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Arrays</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var estudiantes = new Array("Carlos", "Jesus", "Julio", "Bone", "Reyna");
+	var vegetales = new Array("Zanahorias", "Papas", "Pepino", "Tomate");
+	
+	document.write("<p><b>Los estudiantes son:</b></p>"+ estudiantes[0] + "<br/>" + estudiantes[1] + "<br/>" + estudiantes[2] + "<br/>" + estudiantes[3] + "<br/>" + estudiantes[4] + "<br/>");
+	
+	estudiantes.sort();
+	
+	document.write("<p>Arreglo ordenado de estudiantes</p>" + estudiantes[0] + ", " + estudiantes[1] + ", " + estudiantes[2] + ", " + estudiantes[3] + ", " + estudiantes[4] + "<br/>");
+	
+	estudiantes.shift(); 
+	document.write("<p>Lista de estudiantes despues de haber eliminado el primer elemento:</p>" + estudiantes[0] + ", " + estudiantes[1] + ", " + estudiantes[2] + "," + estudiantes[3] + "<br/>");
+
+	estudiantes.reverse();
+	document.write("<p>Lista de estudiantes invertido:</p>" + estudiantes[0] + ", " + estudiantes[1] + ", " + estudiantes[2] + ", " + estudiantes[3] + "<br/>");
+	
+	document.write("<p>El arreglo de vegetales</p>" + vegetales[0] + "<br/>" + vegetales[1] + "<br/>" + vegetales[2] + "<br/>" + vegetales[3] + "<br/>");
+	
+	vegetales.pop(); 
+	
+	document.write("<p>Lista de vegetales despues de quitar el ultimo elemento</p>" + vegetales[0] + " " + vegetales[1] + " " + vegetales[2] + "<br/>");
+	
+	var tercero = estudiantes.concat(vegetales);
+	
+	document.write("<p>Estudianster + Vegetales en un mismo arreglo:</p>" + tercero[0] + ", " + tercero[1] + ", " + tercero[2] + ", " + tercero[3] + ", " + tercero[4] + ", " + tercero[5] + ", " + tercero[6] + "<br/>"); 
+	
+	tercero.splice(2, 0, "Maria");
+	tercero.splice(2, 0, "Jose");
+	document.write("<p>El arreglo despues de añadir 2 elementos mas:</p>" + tercero[0] + ", " + tercero[1] + ", " + tercero[2] + ", " + tercero[3] + ", " + tercero[4] + ", " + tercero[5] + ", " + tercero[6] + ", " + tercero[7] + "<br/>");
+	
+	
+</script>
+</body>

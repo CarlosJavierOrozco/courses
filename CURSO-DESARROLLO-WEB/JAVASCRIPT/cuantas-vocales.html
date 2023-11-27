@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Bienvendio</title>
+<script type="text/javascript">
+
+
+
+	function welcomeMessage(name){
+		
+		// Lo mejor es programar en ingles. Variables y constantes colocarlas en ingles.
+
+		var upper = name.toUpperCase();
+		var welcome = "Hola!";
+		var message = welcome.fontcolor("green") + " " + upper.fontcolor("red");
+		
+		document.write(message + "<br/>");
+		document.write("Tu nombre tienes : " + name.length + " letras.<br/>");
+		
+		var count = 0;
+		
+		for (var j=0; j < name.length; j++){
+
+				if(name[j] == "a")
+				count = count + 1;
+
+				if(name[j] == "e")
+				count = count + 1;
+
+				if(name[j] == "i")
+				count = count + 1;
+
+				if(name[j] == "o")
+				count = count + 1;
+
+				if(name[j] == "u")
+				count = count + 1;
+		}
+
+				document.write("El numero de vocales que tiene tu nombre son: " + count);
+
+				}
+				
+				var yourname = prompt("Enter your name");
+				welcomeMessage(yourname);
+				</script>
+				</head>
+<body>
+</body>
+</html>
