@@ -93,3 +93,19 @@ function keylog(){
 
 keylog();
 
+
+function checked(){
+
+  let ckeck = document.getElementById('ckeck');
+
+  check.addEventListener('change',function(e){
+    if (e.target.checked) {
+      alert("Gracias, prometo cero span :)")
+    }else{
+      alert("Lamento que sea asi :(")
+    }
+  })
+
+}
+
+checked();
