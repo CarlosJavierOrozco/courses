@@ -10,7 +10,10 @@
   <h1>WEB API</h1> 
   <h2>video y audio</h2>
 
-  <video src="../video.mp4" controls id="video"></video>
+  <video src="../video.mp4" id="video"></video>
+  <button id="playPause">></button>
+  <input type="range" name="vol" id="vol">
+  <div id="time">00</div>
 
   <h2>canvas</h2>
   <canvas id="myCanvas1" width="500" height="300"></canvas>
@@ -19,6 +22,9 @@
   
   <script src="clase06.js"></script>
   <style>
+    div#time{
+      display: inline;
+    }
     canvas{
       border: thin solid black;
     }

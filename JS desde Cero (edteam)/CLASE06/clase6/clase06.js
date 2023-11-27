@@ -37,6 +37,27 @@ ctx3.fill();
 
 // AUDIO Y VIDEO
 
-let video = document.getElementById('video')
+let video = document.getElementById('video');
+let playPause = document.getElementById('playPause');
+let vol = document.getElementById('vol');
+let time = document.getElementById('time');
 
-video.addEventListener('ended', () => alert("SE HA TERMINADO"));
+playPause.addEventListener('click', () => {
+  if (playPause.textContent === ">") {
+    video.play();
+    playPause.textContent = "||";
+  } else {
+    video.pause();
+    playPause.textContent = ">";
+  }
+
+});
+
+vol.addEventListener('change', () => {
+  video.volume = vol.value * 0.01
+})
+
+let playTime = setInterval(() => {
+  time.textContent = video.currentTime;
+}, 100);
+
