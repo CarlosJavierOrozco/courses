@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +7,25 @@
   <title>CLASE 06</title>
 </head>
 <body>
-  <h1>canvas</h1> 
+  <h1>WEB API</h1> 
+  <h2>video y audio</h2>
 
-  <canvas id="myCanvas" width="500" height="300" style="border: 1px solid black;"></canvas>
+  <video src="../video.mp4" controls id="video"></video>
+
+  <h2>canvas</h2>
+  <canvas id="myCanvas1" width="500" height="300"></canvas>
+  <canvas id="myCanvas2" width="500" height="300"></canvas>
+  <canvas id="myCanvas3" width="500" height="300"></canvas>
   
   <script src="clase06.js"></script>
+  <style>
+    canvas{
+      border: thin solid black;
+    }
+
+    video{
+      max-width: 100%;
+    }
+  </style>
 </body>
 </html>
