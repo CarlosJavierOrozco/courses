@@ -73,4 +73,20 @@ Animal.prototype.saludar = function() {
 
 const snoopy = new Animal('Snoopy','Macho')
 
-console.log(snoopy)
+// HERENCIA PROTOTIPICA
+// la funcion constructora Perro heredara de Animal
+
+function Perro(nombre,genero,tamanio){
+  this.super = Animal
+  this.super(nombre,genero)
+  this.tamanio = tamanio
+}
+
+// Perro herada todo de la funcion constructora Animal()
+
+
+Perro.prototype = new Animal()
+Perro.prototype.constructor = Perro
+
+
+const koki = new Perro('Koki','Macho','Pequeño')
