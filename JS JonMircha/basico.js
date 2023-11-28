@@ -90,3 +90,39 @@ Perro.prototype.constructor = Perro
 
 
 const koki = new Perro('Koki','Macho','Pequeño')
+
+
+// clases y herencia
+
+class Gerrero{
+  constructor(nombre,fuerza,raza){
+    this.nombre = nombre
+    this.raza = raza
+    this.fuerza = fuerza
+  }
+  saludar(){
+    console.log(`Hola soy un Gerrero y mi nombre es ${this.nombre}`)
+  }
+}
+
+class Arquero extends Gerrero{
+  constructor(nombre,raza,fuerza,genero){
+    super(nombre,raza,fuerza)
+    this.genero = genero
+  }
+  atacar(){
+    console.log(`te ataque!`)
+  }
+  saludar(){
+    console.log(`Hola soy un Arquero y mi nombre es ${this.nombre}`)
+  }
+}
+
+
+const nabel = new Arquero("Nabel",60,"Pleiades","Mujer")
+
+
+const demurge = new Gerrero("Demurge",100,"Overlord")
+
+
+
