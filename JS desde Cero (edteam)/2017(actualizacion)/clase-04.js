@@ -20,6 +20,8 @@ function sumar(a,b,c){
 
 let numeros = [2,4,4]
 
+// AL PARECER ESTO LOS REEMPLAZA EL SPREAD OPERATOR... 
+
 let miSuma = sumar.apply(undefined,numeros);
 console.log(miSuma)
 
