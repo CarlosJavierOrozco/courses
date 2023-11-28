@@ -35,3 +35,42 @@ try {
 } catch(error) {
   console.log(`Se produjo el siguiente error ${error}`);
 }
+
+
+// programacion orientada a objetos
+
+const animal = {
+  nombre : "Rocko",
+  sonar(){
+    console.log('hago sonido porque estoy vivo')
+  }
+}
+
+
+const animal2 = {
+  nombre : "Pata Blanca",
+  sonar(){
+    console.log('hago sonido porque estoy vivo!')
+  }
+}
+
+// para crear mas objeto se hacia con una funcion contructora.
+
+function Animal(nombre,genero){
+  this.nombre = nombre
+  this.genero = genero
+
+  // los metodos es mejor meterlos al prototipo.
+  this.sonar = function(){
+    console.log('Hago sonido porque estoy vivo')
+  }
+}
+
+// esta era la mejor practica
+Animal.prototype.saludar = function() {
+  console.log(`Hola me llamo ${this.nombre} y soy ${this.genero}`)
+};
+
+const snoopy = new Animal('Snoopy','Macho')
+
+console.log(snoopy)
