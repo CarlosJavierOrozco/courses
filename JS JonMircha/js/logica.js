@@ -24,22 +24,25 @@ const recortarCaracter = (cadena = "", longitud = undefined) =>
       ? console.warn("No ingresaste la longitud para recortar el texto")
       : console.info(cadena.slice(0, longitud))
 
-recortarCaracter(,4)
+
+// Ejercicio 3
+// 3) Programa una función que
+// dada una String te devuelva un Array de textos separados por cierto
+// caracter, pe. miFuncion('hola que tal', ' ') devolverá
+// ['hola', 'que', 'tal']. 
 
 
+const cadenaAArreglo = (cadena = "", separador = undefined) =>
+  (!cadena)
+    ? console.warn("No ingresaste ningun texto")
+    :(separador === undefined)
+      ? console.warn("No ingresaste ningun separador")
+      : console.info(cadena.split(separador))
 
-
-
-
-
-
-
+cadenaAArreglo('hola que tal', ' ')
 /*
 
- 3) Programa una función que
- dada una String te devuelva un Array de textos separados por cierto
- caracter, pe. miFuncion('hola que tal', ' ') devolverá
- ['hola', 'que', 'tal']. 
+ 
 
  4) Programa una función que repita un texto X veces,
  pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
