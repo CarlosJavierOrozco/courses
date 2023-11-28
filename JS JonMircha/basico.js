@@ -99,10 +99,23 @@ class Gerrero{
     this.nombre = nombre
     this.raza = raza
     this.fuerza = fuerza
+    this.vida = null
   }
   saludar(){
     console.log(`Hola soy un Gerrero y mi nombre es ${this.nombre}`)
   }
+
+  static mensaje(){
+    console.log("Un Gerrero de Iggdrasil es imponente")
+  }
+
+  get getVida(){
+    return this.vida
+  }
+  set setVida(vida){
+    this.vida = vida
+  }
+
 }
 
 class Arquero extends Gerrero{
@@ -122,7 +135,4 @@ class Arquero extends Gerrero{
 const nabel = new Arquero("Nabel",60,"Pleiades","Mujer")
 
 
-const demurge = new Gerrero("Demurge",100,"Overlord")
-
-
-
+const demiurge = new Gerrero("Demiurge",100,"Overlord")
