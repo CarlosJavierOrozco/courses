@@ -39,8 +39,6 @@ const cadenaAArreglo = (cadena = "", separador = undefined) =>
       ? console.warn("No ingresaste ningun separador")
       : console.info(cadena.split(separador))
 
-cadenaAArreglo('hola que tal', ' ')
-
 
 // Ejercicio 4 
 // 4) Programa una función que repita un texto X veces,
@@ -60,15 +58,19 @@ const repetirTexto = (texto = "", veces = undefined) => {
 }
 
 
+// Ejercicio 5
+// 5) Programa una función que invierta las palabras de una cadena de texto, pe.
+// miFuncion("Hola Mundo") devolverá "odnuM aloH". 
 
+const invertirPalabras = (texto = "") =>
+  (!texto)
+    ? console.warn("No ingresaste nungun texto")
+    : console.info(texto.split("").reverse().join(""))
 
-
-
-
+invertirPalabras("las casas")
 /*
 
- 5) Programa una función que invierta las palabras de una cadena de texto, pe.
- miFuncion("Hola Mundo") devolverá "odnuM aloH". 
+
 
  6) Programa una función para
  contar el número de veces que se repite una palabra en un texto largo, pe.
