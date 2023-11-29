@@ -132,7 +132,6 @@ const eleminarCaracter = (texto = "", patron = "") =>
 
 const aleatorio = () => console.info(Math.round(Math.random() * 100) + 500)
 
-//aleatorio()
 
 //Ejercicio 10
 //10) Programa una función que reciba un número y evalúe si es capicúa o no (que se
@@ -233,4 +232,5 @@ numeroParImpar(21)
 /*
  14) Programa una función para convertir grados Celsius
 a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
+
 */
