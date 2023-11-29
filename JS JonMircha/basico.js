@@ -136,9 +136,3 @@ const nabel = new Arquero("Nabel",60,"Pleiades","Mujer")
 
 
 const demiurge = new Gerrero("Demiurge",100,"Overlord")
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> jonMicha
