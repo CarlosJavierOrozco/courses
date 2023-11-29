@@ -152,11 +152,39 @@ const capicua = (numero = 0) => {
 }
 
 
-capicua(2002)
 
 /*
- 11)
+Ejercicio 11)
 Programa una función que calcule el factorial de un número (El factorial de
 un entero positivo n, se define como el producto de todos los números enteros
 positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.
+*/
+// Optimizar el codigo para que no consuma tanto recursos.
+
+const factorial = (numero = undefined) => {
+  if (numero === undefined) return console.warn("No ingresaste un numero")
+  if (typeof numero !== "number") return console.error("El dato que ingresaste no es un numero")
+
+  // validar que no sea 0.
+
+  // validar que no sea negativo
+
+  let factorial = 1
+
+  for (let i = numero; i > 1;i--) {
+    factorial *= i
+  }
+
+  return console.info(`El factorial de ${numero} es de ${factorial}`)
+
+}
+
+
+
+/*
+12) Programa una función que determine si un número es primo (aquel que solo
+es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true. 13)
+Programa una función que determine si un número es par o impar, pe. miFuncion
+(29) devolverá Impar. 14) Programa una función para convertir grados Celsius
+a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
 */
