@@ -67,14 +67,41 @@ const invertirPalabras = (texto = "") =>
     ? console.warn("No ingresaste nungun texto")
     : console.info(texto.split("").reverse().join(""))
 
-invertirPalabras("las casas")
+
+//Ejercicio 6 
+// 6) Programa una función para
+// contar el número de veces que se repite una palabra en un texto largo, pe.
+// miFuncion("hola mundo adios mundo", "mundo") devolverá 2. 
+
+const textoEnCadena = (cadena = "", buscar = "") =>{
+  if (!cadena) return console.warn("No ingresaste ningun texto")
+  if (!buscar) return console.warn("No ingresaste ninguna palabra a buscar")
+
+  let i = 0
+  let contador = 0
+
+  while (i !== -1) {
+    i = cadena.indexOf(buscar, i)
+    if (i!==-1) {
+      i++
+      contador++
+    }
+  } 
+  // colocar alguna condicion para que cuando el texto aparezca "1 vez" no diga "1 veces"
+  return console.info(`El texto aparecio ${contador} veces`)
+}
+
+
+textoEnCadena("hola mundo, adios mundo","d")
+
+
+
+
+
+
+
+
 /*
-
-
-
- 6) Programa una función para
- contar el número de veces que se repite una palabra en un texto largo, pe.
- miFuncion("hola mundo adios mundo", "mundo") devolverá 2. 
 
  7) Programa una
  función que valide si una palabra o frase dada, es un palíndromo (que se lee
