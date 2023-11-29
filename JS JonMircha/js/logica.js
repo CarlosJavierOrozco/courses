@@ -180,10 +180,40 @@ const factorial = (numero = undefined) => {
 }
 
 
+//Ejercicio 12
+//12) Programa una función que determine si un número es primo (aquel que solo
+//es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
+
+
+const numeroPrimo = (numero = undefined) => {
+  if (numero === undefined) return console.warn("No ingresaste un numero")
+  if (typeof numero !== "number") return console.error("El dato que ingresaste no es un numero")
+
+  // validar que no sea 0.
+  // valida que no sea 1
+  // validar que no sea negativo
+
+  let divisible = false
+
+  for (let i = 2; i < numero; i++) {
+    if ((numero % i === 0)) {
+      divisible = true
+      break;
+    }
+  }
+
+  return (divisible)
+    ? console.log(`El numero ${numero}, no es primo`)
+    : console.log(`El numero ${numero}, si es primo`)
+}
+
+
+numeroPrimo(5)
+
+
 
 /*
-12) Programa una función que determine si un número es primo (aquel que solo
-es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true. 13)
+ 13)
 Programa una función que determine si un número es par o impar, pe. miFuncion
 (29) devolverá Impar. 14) Programa una función para convertir grados Celsius
 a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
