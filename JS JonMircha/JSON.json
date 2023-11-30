@@ -1,0 +1,9 @@
+{
+  "nombre": "carlos orozco",
+  "hermanos": ["Jesus","Julio"],
+  "casado": "true",
+  "esposa": {
+    "nombre": "Mariyen Hernandez",
+    "hermanas": ["Yederlys","Elia"]
+  }
+}
