@@ -247,3 +247,48 @@ meses.forEach((el) => {
 document.write("<h3>Meses del Año</h3>");
 $ul3.appendChild($fragment);
 document.body.appendChild($ul3);
+
+// Curso JavaScript: 69. DOM: Templates HTML
+
+//para cuando quiera pintar en el DOM información dimaca debo hacer lo siguiente:
+//1.Crear el template en Html
+//2.Crear el Template en js
+//3.Crear el fragme en js
+//4.Ejecutar la función y/o el proceso y llevar al template y luego al fragme para después pintarlo en el HTML.
+
+//const $cardsTemp = document.querySelector(".cards") // ya estaba creado
+const $template = document.getElementById("template-card").content
+const $fragmentTemp = document.createDocumentFragment()
+const   cardsContent = [
+    {
+      title: "Tecnología",
+      img: "https://placeimg.com/200/200/tech",
+    },
+    {
+      title: "Animales",
+      img: "https://placeimg.com/200/200/animals",
+    },
+    {
+      title: "Arquitectura",
+      img: "https://placeimg.com/200/200/arch",
+    },
+    {
+      title: "Gente",
+      img: "https://placeimg.com/200/200/people",
+    },
+    {
+      title: "Naturaleza",
+      img: "https://placeimg.com/200/200/nature",
+    },
+  ];
+
+cardsContent.forEach((el) => {
+    $template.querySelector("img").setAttribute("src", el.img);
+    $template.querySelector("img").setAttribute("alt", el.title);
+    $template.querySelector("figcaption").textContent = el.title;
+
+    let $clone = document.importNode($template, true);
+    $fragmentTemp.appendChild($clone);
+});
+
+$cards.appendChild($fragmentTemp);
