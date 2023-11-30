@@ -28,7 +28,7 @@ set1.has(5) // => true
 
 set1.clear() // limpia todo el set.*/
 
-
+/*
 let mapa = new Map()
 mapa.set('nombre','carlos')
 mapa.set('edad',31)
@@ -66,4 +66,29 @@ console.log(hermanas)
 
 const hermanasNombres = [...hermanas.values()]
 
-console.log(hermanasNombres)
+console.log(hermanasNombres)*/
+const ws = new WeakSet()
+
+let valor1 = {"valor": 1}
+let valor2 = {"valor": 2}
+let valor3 = {"valor": 3}
+let valor4 = {"valor": 4}
+let valor5 = {"valor": 5}
+
+ws.add(valor1)
+ws.add(valor2)
+ws.add(valor3)
+ws.add(valor4)
+ws.add(valor5)
+
+
+const wm = new WeakMap()
+let llave1 = {}
+let llave2 = {}
+let llave3 = {}
+let llave4 = {}
+
+wm.set(llave1,1)
+wm.set(llave2,2)
+wm.set(llave3,3)
+wm.set(llave4,5)
