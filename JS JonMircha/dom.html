@@ -4,6 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DOM</title>
+  <style>
+    :root{
+      --dark-color: black;
+      --yellow-color: yellow;
+      }
+
+      .card{
+            display: inline-block;
+            background-color: var(--dark-color);
+            color: var(--yellow-color);
+        }
+
+        .card figcaption{
+            padding: 1rem;
+        }
+
+        .rotate-45{
+            transform: rotate(45deg);
+        }
+
+        .rotate-135{
+            transform: rotate(135deg);
+        }
+
+        .opacity-80{
+            opacity: .8;
+        }
+
+        .sepia{
+            filter: sepia(1);
+        }
+  </style>
 </head>
 <body>
   <h1>EL DOM</h1>
@@ -24,7 +56,7 @@
   </nav>
 
   <input type="text" name="nombre" placeholder="Tu nombre">
-  <a href="basico.html" class="link" data-description="link a basico.html">I a basico.html</a>
+  <a style="background-color: #f7df1e; color: black;" href="basico.html" class="link" data-description="link a basico.html">I a basico.html</a>
 
   <section class="cards">
     <figure class="card">

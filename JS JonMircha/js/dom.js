@@ -68,3 +68,31 @@ $linkBasico.setAttribute("data-id","link1")
 console.log($linkBasico.dataset.id)
 $linkBasico.dataset.type = "internal link"
 console.log($linkBasico.dataset.type)
+
+console.log($linkBasico.style.backgroundColor)
+console.log($linkBasico.getAttribute("style"))
+//console.log(window.getComputedStyle($linkBasico))
+console.log(window.getComputedStyle($linkBasico).getPropertyValue("font-size"))
+//setear estilos
+$linkBasico.style.setProperty("text-decoration","none")
+$linkBasico.style.setProperty("display","block")
+$linkBasico.style.width = "50%"
+$linkBasico.style.textAlign = "center"
+$linkBasico.style.margin = "1em auto"
+$linkBasico.style.setProperty("padding","1em")
+$linkBasico.style.setProperty("border-radius","10px")
+
+
+//variables CSS
+
+const $html = document.documentElement
+const $body = document.body
+
+let darkColor = getComputedStyle($html).getPropertyValue("--dark-color")
+let yellowColor = getComputedStyle($html).getPropertyValue("--yellow-color")
+
+console.log(darkColor,yellowColor)
+
+//$body.style.backgroundColor = darkColor
+//$body.style.color = yellowColor
+
