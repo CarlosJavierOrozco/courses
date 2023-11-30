@@ -138,9 +138,37 @@ let iterador = iterable()
 // console.log(iterador.next())
 // console.log(iterador.next())
 
-for (y of iterador){
+/*for (y of iterador){
   console.log(y)
 }
 
 const arr = [...iterable()]
-console.log(arr)
+console.log(arr)*/
+
+// proxies
+
+const persona = {
+  nombre: "",
+  edad: 0,
+  correo: ""
+}
+
+const manejador = {
+  set(obj,prop,valor){
+    if(Object.keys(obj).indexOf(prop) === -1){
+      return console.error("no exite esa propiedad")
+    }
+    //validar nombre correcto, apellido y correo. Lo tengo como tarea
+    //ten en cuenta que debes valirda la propiedad y el valor 
+    // si propiedad es igual a tal y el valor a tal entoncees retornar bien. 
+    //clase para repasar los proxies
+    obj[prop] = valor
+  }
+}
+
+const carlos = new Proxy(persona,manejador)
+
+carlos.nombre = "Carlos"
+carlos.edad = 31
+carlos.correo = "carlos@gmail.com"
+carlos.casado = true
