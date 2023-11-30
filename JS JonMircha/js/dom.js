@@ -96,3 +96,15 @@ console.log(darkColor,yellowColor)
 //$body.style.backgroundColor = darkColor
 //$body.style.color = yellowColor
 
+const $card = document.querySelector(".card")
+
+// podemos separar las clases por coma para añadir o quitar mas...
+$card.classList.add("rotate-45")
+
+console.log($card.className)
+console.log($card.classList)
+console.log($card.classList.contains("rotate-45"))
+
+$card.classList.remove("rotate-45")
+$card.classList.toggle("rotate-45")
+$card.classList.replace("rotate-45","rotate-135")
