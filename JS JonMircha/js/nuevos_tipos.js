@@ -176,7 +176,7 @@ carlos.correo = "carlos@gmail.com"
 
 //propiedades dinamicas
 
-let aleatorio = Math.round(Math.random() * 20)
+/*let aleatorio = Math.round(Math.random() * 20)
 const objUsuarios = {
   [`id_${aleatorio}`]: "aleatorio"
 }
@@ -185,4 +185,25 @@ const usuarios = ["carlos","kala","jon"]
 
 usuarios.forEach((usuario,index) => objUsuarios[`id_${index}`] = usuario)
 
-console.log(objUsuarios)
+console.log(objUsuarios)*/
+
+
+
+//call,apply y bind
+
+//llamar un nuevo contexto call() y apply()
+//diferencia entre call() y apply()
+//=> como pasamos los parametros a utilizar. Con call separados por comas y con apply en un arreglo
+
+
+
+this.nombre = "window"
+
+function saludar(bien,mal){
+  console.log(this.nombre + bien + mal)
+}
+
+let carlos = {
+  "nombre": "carlos"
+}
+saludar.apply(carlos,[" bem", " mal"])
