@@ -146,7 +146,7 @@ const arr = [...iterable()]
 console.log(arr)*/
 
 // proxies
-
+/*
 const persona = {
   nombre: "",
   edad: 0,
@@ -171,4 +171,18 @@ const carlos = new Proxy(persona,manejador)
 carlos.nombre = "Carlos"
 carlos.edad = 31
 carlos.correo = "carlos@gmail.com"
-carlos.casado = true
+//carlos.casado = true*/
+
+
+//propiedades dinamicas
+
+let aleatorio = Math.round(Math.random() * 20)
+const objUsuarios = {
+  [`id_${aleatorio}`]: "aleatorio"
+}
+const usuarios = ["carlos","kala","jon"]
+
+
+usuarios.forEach((usuario,index) => objUsuarios[`id_${index}`] = usuario)
+
+console.log(objUsuarios)
