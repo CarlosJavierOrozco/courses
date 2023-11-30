@@ -96,8 +96,8 @@ wm.set(llave3,3)
 wm.set(llave4,5)*/
 
 //iterable e iterador
-const iterable = [1,2,3,4,5,6,7,8,9];
-const iterador = iterable[Symbol.iterator]()
+//const iterable = [1,2,3,4,5,6,7,8,9];
+//const iterador = iterable[Symbol.iterator]()
 
 // console.log(iterador.next())
 // console.log(iterador.next())
@@ -110,9 +110,37 @@ const iterador = iterable[Symbol.iterator]()
 // console.log(iterador.next())
 // console.log(iterador.next())
 
-let next = iterador.next()
+/*let next = iterador.next()
 
 while(!next.done){
   console.log(next.value)
   next = iterador.next()
 }
+*/
+
+
+function* iterable(){
+  yield "hola1"
+  console.log("hola consola")
+  yield "hola2"
+  yield "hola3"
+  console.log("seguimos con mas instrucciones")
+  yield "hola4"
+  yield "hola5"
+} 
+
+let iterador = iterable()
+
+// console.log(iterador.next())
+// console.log(iterador.next())
+// console.log(iterador.next())
+// console.log(iterador.next())
+// console.log(iterador.next())
+// console.log(iterador.next())
+
+for (y of iterador){
+  console.log(y)
+}
+
+const arr = [...iterable()]
+console.log(arr)
