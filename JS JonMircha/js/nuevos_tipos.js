@@ -67,7 +67,9 @@ console.log(hermanas)
 const hermanasNombres = [...hermanas.values()]
 
 console.log(hermanasNombres)*/
-const ws = new WeakSet()
+
+
+/*const ws = new WeakSet()
 
 let valor1 = {"valor": 1}
 let valor2 = {"valor": 2}
@@ -91,4 +93,26 @@ let llave4 = {}
 wm.set(llave1,1)
 wm.set(llave2,2)
 wm.set(llave3,3)
-wm.set(llave4,5)
+wm.set(llave4,5)*/
+
+//iterable e iterador
+const iterable = [1,2,3,4,5,6,7,8,9];
+const iterador = iterable[Symbol.iterator]()
+
+// console.log(iterador.next())
+// console.log(iterador.next())
+// console.log(iterador.next())
+// console.log(iterador.next())
+// console.log(iterador.next())
+// console.log(iterador.next())
+// console.log(iterador.next())
+// console.log(iterador.next())
+// console.log(iterador.next())
+// console.log(iterador.next())
+
+let next = iterador.next()
+
+while(!next.done){
+  console.log(next.value)
+  next = iterador.next()
+}
