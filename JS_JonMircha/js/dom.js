@@ -350,7 +350,7 @@ $newCard.querySelector("figcaption").insertAdjacentText("afterbegin", "Any"); */
 //**/
 
 // Curso JavaScript: 72. DOM: Manejadores de Eventos 
-
+/*
 
 function holaMundo(){
   alert("Hola Mundo")
@@ -362,11 +362,30 @@ const $eventoSemantico = document.getElementById('even-sem')
 
 //no se pone los parentesis
 $eventoSemantico.onclick = holaMundo;
-
+*/
 
 
 const $evenMultiple = document.getElementById("even-mul")
 
 
 // se puede pasar mas funciones sin sobreescritura.
-$evenMultiple.addEventListener('click',holaMundo)
+//$evenMultiple.addEventListener('click',holaMundo)
+
+
+
+// 73 parametros y remover eventos
+
+
+function saludar(nombre = "desconocid@"){
+  alert(`Hola ${nombre}`)
+}
+
+$evenMultiple.addEventListener("click", saludar)
+
+//para poder pasarle parametros a una funcion.
+$evenMultiple.addEventListener("click", () => saludar("Carlos"))
+
+// remover un evento. La funcion manejadora debera ser almacenada en una varible.
+
+//dentro de esa function se coloca el removedor de eventos. 
+// removeEventListener('click',removerClick)
