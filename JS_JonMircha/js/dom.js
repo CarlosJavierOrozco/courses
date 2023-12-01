@@ -396,16 +396,23 @@ $evenMultiple.addEventListener("click", () => saludar("Carlos"))
 
 
 const $divsEventos = document.querySelectorAll('.eventos-flujo div')
+const $linkEvento = document.querySelector('.eventos-flujo a')
 
 function flujoEventos(e){
   console.log("Hola" + " te saluda " + this.className + "el evento lo produjo " + e.target.className)
+  e.stopPropagation() //evitar la propagacion.
 }
 
 $divsEventos.forEach(div =>{
   //div.addEventListener('click',flujoEventos,true)
   div.addEventListener('click',flujoEventos,{
     capture: false,
-    once: true, //solo lo ejecuta una vez. 
+   // once: true, //solo lo ejecuta una vez. 
   })
 })
 
+$linkEvento.addEventListener('click', e => {
+  console.log("Aprende JS gratis")
+  e.preventDefault()
+  e.stopPropagation()
+})
