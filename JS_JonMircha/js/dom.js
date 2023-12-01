@@ -69,6 +69,9 @@ console.log($linkBasico.dataset.id)
 $linkBasico.dataset.type = "internal link"
 console.log($linkBasico.dataset.type)
 
+
+// DOM: Estilos y Variables CSS
+
 console.log($linkBasico.style.backgroundColor)
 console.log($linkBasico.getAttribute("style"))
 //console.log(window.getComputedStyle($linkBasico))
