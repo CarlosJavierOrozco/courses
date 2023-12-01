@@ -395,7 +395,7 @@ $evenMultiple.addEventListener("click", () => saludar("Carlos"))
 // Curso JavaScript: 74. DOM: Flujo de Eventos (Burbuja y Captura)
 
 
-const $divsEventos = document.querySelectorAll('.eventos-flujo div')
+/*const $divsEventos = document.querySelectorAll('.eventos-flujo div')
 const $linkEvento = document.querySelector('.eventos-flujo a')
 
 function flujoEventos(e){
@@ -415,4 +415,29 @@ $linkEvento.addEventListener('click', e => {
   console.log("Aprende JS gratis")
   e.preventDefault()
   e.stopPropagation()
+})*/
+
+
+
+//Curso JavaScript: 76. DOM: Delegación de Eventos
+
+//delegacion de los eventos. 
+
+//Asignamos el listener a document o a algun ancestro.
+//con algun condicional buscamos la coinsidencia de algun selector
+//
+
+document.addEventListener('click',(e)=>{
+ // console.log(`click en ${e.target}`)
+
+  if (e.target.matches(".eventos-flujo div")) {
+    console.log("hola")
+    e.stopPropagation()
+  }
+
+  if (e.target.matches(".eventos-flujo a")) {
+    alert("Aprende gratis JS con @jonmircha")
+    e.preventDefault()
+    //no hay necesidad del stopPropagation
+  }
 })
