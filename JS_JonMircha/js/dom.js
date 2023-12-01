@@ -441,3 +441,43 @@ document.addEventListener('click',(e)=>{
     //no hay necesidad del stopPropagation
   }
 })
+
+
+//BOM propiedades y eventos
+
+window.addEventListener('resize',e=>{
+  console.clear()
+  console.log("##### Evento Resize #####")
+  console.log(innerWidth)
+  console.log(innerHeight)
+  console.log(outerWidth)
+  console.log(outerHeight)
+ //scrolls 
+
+})
+
+
+window.addEventListener('scroll',()=>{
+  console.clear()
+  console.log("##### Evento Scroll #####")
+  console.log(scrollX)
+  console.log(scrollY)
+  console.log(pageXOffset)
+  console.log(pageYOffset)
+})
+
+
+window.addEventListener('load',e=>{
+  console.log("##### Evento Load #####")  
+  console.log(screenX)
+  console.log(screenY)
+})
+
+
+//Es mucho mas eficiente. No espera CSS por ejemplo.
+document.addEventListener('DOMContentLoaded',e=>{
+  console.log("##### Evento Load #####")  
+  console.log(screenX)
+  console.log(screenY)
+})
+
