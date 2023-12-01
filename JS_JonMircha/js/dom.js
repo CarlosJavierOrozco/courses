@@ -96,8 +96,8 @@ let yellowColor = getComputedStyle($html).getPropertyValue("--yellow-color")
 
 console.log(darkColor,yellowColor)
 
-//$body.style.backgroundColor = darkColor
-//$body.style.color = yellowColor
+$body.style.backgroundColor = darkColor
+$body.style.color = yellowColor
 
 const $card = document.querySelector(".card")
 
@@ -331,7 +331,7 @@ Posiciones:
   afterend(hermano siguiente)
 */
 
-const $cards = document.querySelector(".cards"),
+/*//const $cards = document.querySelector(".cards"),
   $newCard = document.createElement("figure");
 
 let $contenCard = `
@@ -347,3 +347,26 @@ $newCard.querySelector("figcaption").insertAdjacentText("afterbegin", "Any"); */
 //$cards.append($newCard); //
 //$cards.before($newCard);
 //$cards.after($newCard);
+//**/
+
+// Curso JavaScript: 72. DOM: Manejadores de Eventos 
+
+
+function holaMundo(){
+  alert("Hola Mundo")
+  console.log(event)
+}
+
+
+const $eventoSemantico = document.getElementById('even-sem')
+
+//no se pone los parentesis
+$eventoSemantico.onclick = holaMundo;
+
+
+
+const $evenMultiple = document.getElementById("even-mul")
+
+
+// se puede pasar mas funciones sin sobreescritura.
+$evenMultiple.addEventListener('click',holaMundo)
