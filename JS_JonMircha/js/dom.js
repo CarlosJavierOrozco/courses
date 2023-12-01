@@ -389,3 +389,23 @@ $evenMultiple.addEventListener("click", () => saludar("Carlos"))
 
 //dentro de esa function se coloca el removedor de eventos. 
 // removeEventListener('click',removerClick)
+
+
+
+// Curso JavaScript: 74. DOM: Flujo de Eventos (Burbuja y Captura)
+
+
+const $divsEventos = document.querySelectorAll('.eventos-flujo div')
+
+function flujoEventos(e){
+  console.log("Hola" + " te saluda " + this.className + "el evento lo produjo " + e.target.className)
+}
+
+$divsEventos.forEach(div =>{
+  //div.addEventListener('click',flujoEventos,true)
+  div.addEventListener('click',flujoEventos,{
+    capture: false,
+    once: true, //solo lo ejecuta una vez. 
+  })
+})
+
