@@ -196,7 +196,6 @@ console.log(objUsuarios)*/
 //=> como pasamos los parametros a utilizar. Con call separados por comas y con apply en un arreglo
 
 
-
 this.nombre = "window"
 
 function saludar(bien,mal){
@@ -207,6 +206,20 @@ let carlos = {
   "nombre": "carlos"
 }
 saludar.apply(carlos,[" bem", " mal"])
+
+
+const mary = {
+  nombre: "Mariyen",
+  edad: 31,
+ saludar: function (){
+    console.log("Hola " + this.nombre)
+  }
+}
+
+const mariyen = {
+  saludar : mary.saludar.bind(mary)
+}
+
 
 //THIS 
 
