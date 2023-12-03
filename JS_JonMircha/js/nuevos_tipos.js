@@ -196,7 +196,6 @@ console.log(objUsuarios)*/
 //=> como pasamos los parametros a utilizar. Con call separados por comas y con apply en un arreglo
 
 
-
 this.nombre = "window"
 
 function saludar(bien,mal){
@@ -207,3 +206,46 @@ let carlos = {
   "nombre": "carlos"
 }
 saludar.apply(carlos,[" bem", " mal"])
+
+
+const mary = {
+  nombre: "Mariyen",
+  edad: 31,
+ saludar: function (){
+    console.log("Hola " + this.nombre)
+  }
+}
+
+const mariyen = {
+  saludar : mary.saludar.bind(mary)
+}
+
+
+//THIS 
+
+// this dentro de una funcion hace referencia al objeto window
+// this dentro de un objeto hace referencia al objeto mismo.
+// this dentro de una clase o funcion constructora hace referencia al objeto instanciado.
+// this dentro de una arrow function toma el contexto del padre del objeto donde se ha 
+// creado la arrow function. Si no hay padre, entonces "this" es el objeto windows... que 
+// es el padre de todo. 
+
+window.nombre = "WINDOWS 10"
+console.log(this === window) // => true
+
+function Persona(nombre){
+  this.nombre = nombre
+  return () => {
+    console.log("hola " + this.nombre)
+  }
+}
+
+function Persona(nombre){
+  this.nombre = nombre
+  return function () {
+    console.log("hola " + this.nombre)
+  }
+}
+
+
+let yo = new Persona("carlos")

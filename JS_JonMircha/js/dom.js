@@ -69,6 +69,9 @@ console.log($linkBasico.dataset.id)
 $linkBasico.dataset.type = "internal link"
 console.log($linkBasico.dataset.type)
 
+
+// DOM: Estilos y Variables CSS
+
 console.log($linkBasico.style.backgroundColor)
 console.log($linkBasico.getAttribute("style"))
 //console.log(window.getComputedStyle($linkBasico))
@@ -93,8 +96,8 @@ let yellowColor = getComputedStyle($html).getPropertyValue("--yellow-color")
 
 console.log(darkColor,yellowColor)
 
-//$body.style.backgroundColor = darkColor
-//$body.style.color = yellowColor
+$body.style.backgroundColor = darkColor
+$body.style.color = yellowColor
 
 const $card = document.querySelector(".card")
 
@@ -292,3 +295,149 @@ cardsContent.forEach((el) => {
 });
 
 $cards.appendChild($fragmentTemp);
+
+/*
+//Curso JavaScript: 70. DOM: Modificando Elementos (Old Style)
+
+//const $cards = document.querySelector(".cards") 
+const $newCard = document.createElement("figure")
+const $cloneCards = $cards.cloneNode(true)
+$newCard.innerHTML = `
+    <img src="https://placeimg.com/200/200/any" alt="ANY">
+    <figcaption>ANY</figcaption>
+`
+
+$newCard.classList.add("card")
+
+//$cards.replaceChild($newCard,$cards.children[2])
+//$cards.insertBefore($newCard,$cards.firstElementChild)
+//$cards.removeChild($cards.lastElementChild)
+document.body.appendChild($cloneCards)
+/*
+
+
+Curso JavaScript: 71. DOM: Modificando Elementos (Cool Style)
+
+/*
+.insertAdjacent...
+  .insertAdjacentElement(position, el)
+  .insertAdjacentHTML(position, html)
+  .insertAdjacentText(position, text)
+
+Posiciones:
+  beforebegin(hermano anterior)
+  afterbegin(primer hijo)
+  beforeend(ultimo hijo)
+  afterend(hermano siguiente)
+*/
+
+/*//const $cards = document.querySelector(".cards"),
+  $newCard = document.createElement("figure");
+
+let $contenCard = `
+  <img src="https://placeimg.com/200/200/any" alt="Any">
+  <figcaption></figcaption>
+`;
+$newCard.classList.add("card");
+
+$newCard.insertAdjacentHTML("afterbegin", $contenCard);
+$cards.insertAdjacentElement("beforeend", $newCard);
+$newCard.querySelector("figcaption").insertAdjacentText("afterbegin", "Any"); */
+//$cards.prepend($newCard); //
+//$cards.append($newCard); //
+//$cards.before($newCard);
+//$cards.after($newCard);
+//**/
+
+// Curso JavaScript: 72. DOM: Manejadores de Eventos 
+/*
+
+function holaMundo(){
+  alert("Hola Mundo")
+  console.log(event)
+}
+
+
+const $eventoSemantico = document.getElementById('even-sem')
+
+//no se pone los parentesis
+$eventoSemantico.onclick = holaMundo;
+*/
+
+
+const $evenMultiple = document.getElementById("even-mul")
+
+
+// se puede pasar mas funciones sin sobreescritura.
+//$evenMultiple.addEventListener('click',holaMundo)
+
+
+
+// 73 parametros y remover eventos
+
+
+function saludar(nombre = "desconocid@"){
+  alert(`Hola ${nombre}`)
+}
+
+$evenMultiple.addEventListener("click", saludar)
+
+//para poder pasarle parametros a una funcion.
+$evenMultiple.addEventListener("click", () => saludar("Carlos"))
+
+// remover un evento. La funcion manejadora debera ser almacenada en una varible.
+
+//dentro de esa function se coloca el removedor de eventos. 
+// removeEventListener('click',removerClick)
+
+
+
+// Curso JavaScript: 74. DOM: Flujo de Eventos (Burbuja y Captura)
+
+
+/*const $divsEventos = document.querySelectorAll('.eventos-flujo div')
+const $linkEvento = document.querySelector('.eventos-flujo a')
+
+function flujoEventos(e){
+  console.log("Hola" + " te saluda " + this.className + "el evento lo produjo " + e.target.className)
+  e.stopPropagation() //evitar la propagacion.
+}
+
+$divsEventos.forEach(div =>{
+  //div.addEventListener('click',flujoEventos,true)
+  div.addEventListener('click',flujoEventos,{
+    capture: false,
+   // once: true, //solo lo ejecuta una vez. 
+  })
+})
+
+$linkEvento.addEventListener('click', e => {
+  console.log("Aprende JS gratis")
+  e.preventDefault()
+  e.stopPropagation()
+})*/
+
+
+
+//Curso JavaScript: 76. DOM: Delegación de Eventos
+
+//delegacion de los eventos. 
+
+//Asignamos el listener a document o a algun ancestro.
+//con algun condicional buscamos la coinsidencia de algun selector
+//
+
+document.addEventListener('click',(e)=>{
+ // console.log(`click en ${e.target}`)
+
+  if (e.target.matches(".eventos-flujo div")) {
+    console.log("hola")
+    e.stopPropagation()
+  }
+
+  if (e.target.matches(".eventos-flujo a")) {
+    alert("Aprende gratis JS con @jonmircha")
+    e.preventDefault()
+    //no hay necesidad del stopPropagation
+  }
+})

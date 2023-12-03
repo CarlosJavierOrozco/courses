@@ -40,6 +40,25 @@
         .sepia{
             filter: sepia(1);
         }
+
+
+        .eventos-flujo div{
+          padding: 4rem;
+          font-size: 2rem;
+          text-align: center;
+        }
+
+        .uno{
+          background-color: yellow;
+        }
+
+        .dos{
+          background-color: gold;
+        }
+
+        .tres{
+          background-color: lightyellow;
+        }
   </style>
 </head>
 <body>
@@ -106,6 +125,31 @@
       <figcaption></figcaption>
     </figure>
   </template>
+
+  <h3>Eventos en JS</h3>
+  <h4>Manejador de eventos</h4>
+
+  <button onclick="holaMundo()">Evento con atributo HTML</button>
+  <br>
+  <br>
+  <button id="even-sem">Evento con manjador semantico</button>
+  <br>
+  <br>
+  <button id="even-mul">Evento con manjador multiple</button>
+
+
+  <h4>Flujo de eventos</h4>
+
+  <section class="eventos-flujo">
+    <div class="uno">1
+      <div class="dos">2
+        <div class="tres">3
+          <a href="https://aprendejavascript.org/" target="_blank">Aprende JS gratis</a>
+        </div>
+      </div>
+    </div>
+    
+  </section>
  <script src="js/dom.js"></script> 
 </body>
 </html>
