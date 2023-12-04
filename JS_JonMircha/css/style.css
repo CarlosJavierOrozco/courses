@@ -134,3 +134,16 @@ a{
   border-radius: 50%;
   background-color: var(--main-color);
 }
+
+
+#countdown{
+  background-color: var(--second-color);
+  border: normal solid var(--main-color);
+  border-radius: 4px;
+  color: white;
+  display: inline-block;
+  padding: 1px 16px;
+}
+.textCount{
+  color: var(--main-color);
+}
