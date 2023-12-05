@@ -151,7 +151,7 @@ a{
 }
 
 
-.scroll-top-btn{
+.scroll-top-btn, .dark-theme{
   position: fixed;
   bottom: 1vh;
   right: calc(4.25rem + 1vw);
@@ -165,8 +165,11 @@ a{
   transition: all .5s ease;
 }
 
+.dark-theme{
+  left: 1vw;
+}
 
-.scroll-top-btn:hover{
+.scroll-top-btn:hover, .dark-theme:hover{
   background-color: var(--second-color);
   color: var(--main-color);
 }
@@ -180,4 +183,18 @@ a{
 .hidden{
   visibility: hidden;
   opacity: 0;
+}
+
+
+.dark-mode{
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
+
+.dark-mode.stage{
+  background-color: var(--main-color);
+}
+
+.dark-mode.ball{
+  background-color: var(--second-color);
 }
