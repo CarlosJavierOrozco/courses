@@ -1,0 +1,95 @@
+@import "variables";
+body{
+  background-color: $bgColor;
+  font-size: $fontSize * 2;
+}
+
+h2{
+  color: purple;
+  + p{
+    background-color: steelblue;
+  }
+  > a{
+    text-transform: uppercase;
+  }
+}
+
+.box{
+  $bgColor: yellow;
+  border: 1px solid currentColor;
+  background-color: $bgColor;
+
+  p{
+    border: $border;
+  }
+
+  &:hover{
+    background-color: slateblue;
+  }
+}
+
+.box2{
+  // si ya existe esta variable no me la sobreescribas, si no existe creala. 
+  //!default
+  $bgColor: blue !global;
+  //permite sobreesxribir una variable global !global
+  background-color: $bgColor;
+}
+
+.box3{
+  //el color blue esta en otro scope pero por cascada lo sobreescribi y ahora tambien es azul
+  background-color: $bgColor;
+}
+
+.facebook{
+  color: brown;
+
+  footer &{
+    text-decoration-color: powderblue;
+  }
+}
+
+
+.menu{
+  $mainColor: yellow;
+  color: chartreuse;
+  border: 1px solid $mainColor;
+  &, ul{
+    list-style: none;
+  }
+  //evitat que me lo compile como hijo de .menu @at-root
+  @at-root .icon-menu{
+    color: $mainColor;
+  }
+
+}
+
+.button{
+  column-count: 3;
+
+  a#{&}{
+    color: darkmagenta;
+  }
+}
+
+//partials son archivos que no se van a compilar. Inicia sus numbres con un guion bajo _
+
+//extends nos extender los estilos de una clase.
+
+
+
+.extends-box{
+  display: flex;
+  background-color: lightgoldenrodyellow;
+  border: thin solid lime;
+  position: relative;
+
+  &__items{
+    position: relative;
+  }
+}
+
+.box-extendido{
+  @extend .extends-box;
+  flex-direction: column;
+}

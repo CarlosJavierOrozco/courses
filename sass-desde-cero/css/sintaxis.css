@@ -1,0 +1,80 @@
+body {
+  background-color: stealblue;
+  font-size: 2rem;
+}
+
+h2 {
+  color: purple;
+}
+h2 + p {
+  background-color: steelblue;
+}
+h2 > a {
+  text-transform: uppercase;
+}
+
+.box {
+  border: 1px solid currentColor;
+  background-color: yellow;
+}
+.box p {
+  border: 1px solid darkred;
+}
+.box:hover {
+  background-color: slateblue;
+}
+
+.box2 {
+  background-color: blue;
+}
+
+.box3 {
+  background-color: blue;
+}
+
+.facebook {
+  color: brown;
+}
+footer .facebook {
+  -webkit-text-decoration-color: powderblue;
+          text-decoration-color: powderblue;
+}
+
+.menu {
+  color: chartreuse;
+  border: 1px solid yellow;
+}
+.menu, .menu ul {
+  list-style: none;
+}
+.icon-menu {
+  color: yellow;
+}
+
+.button {
+  -webkit-column-count: 3;
+     -moz-column-count: 3;
+          column-count: 3;
+}
+.button a.button {
+  color: darkmagenta;
+}
+
+.extends-box, .box-extendido {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: lightgoldenrodyellow;
+  border: thin solid lime;
+  position: relative;
+}
+.extends-box__items {
+  position: relative;
+}
+
+.box-extendido {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
