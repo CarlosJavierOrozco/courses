@@ -1,0 +1,55 @@
+.App{
+  min-height: 100vh;
+  line-height: 1.4;
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column;
+
+}
+
+body{
+  margin: 0;
+}
+
+ul {
+  padding: 2em;
+}
+
+li{
+  white-space: nowrap;
+}
+
+header,footer{
+  background-color: steelblue;
+  color: whitesmoke;
+  padding: 2rem;
+}
+
+main{
+  display: inherit;
+  flex-direction: column;
+}
+aside {
+  padding: 2rem;
+  background-color: deepskyblue;
+  order: 1;
+}
+
+section{
+  padding: 2rem;
+  background-color: #ccc;
+}
+
+@media screen and (min-width: 64em) {
+  main{
+    flex-direction: row;
+  }
+
+  aside{
+    flex-basis: 30%;
+  }
+
+  section{
+    flex-basis: 70%;
+  }
+}
