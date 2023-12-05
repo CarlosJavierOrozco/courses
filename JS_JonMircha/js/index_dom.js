@@ -11,9 +11,9 @@ d.addEventListener("DOMContentLoaded", (e)=>{
   hamburgerMenu(".panel-btn",".panel",".menu a");
   digitalCLock("#reloj","#activar-reloj","#desactivar-reloj");
   alarm("assets/alarma.mp3","#activar-alarma","#desactivar-alarma");
-  countdown("countdown","Apr 26, 2023 12:00:00","Se termino el tiempo, espero ya seas desarrollador web :)");
+  countdown("countdown","Nov 26, 2022 07:37:50","Se termino el tiempo, espero ya seas desarrollador web :)");
   scrollTopButton(".scroll-top-btn");
-  darkTheme(".dark-theme","dark-mode");
+
 })
 
 
@@ -21,3 +21,5 @@ d.addEventListener("keydown",(e)=>{
   shortcuts(e)
   moveBall(e,".ball",".stage")
 })
+
+darkTheme(".dark-theme","dark-mode");
