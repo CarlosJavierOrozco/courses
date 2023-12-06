@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.App{
+
+}
+
+header{
+    background-color: darkseagreen;
+    height: 70px;
+}
+
+nav{
+    background-color: lightcoral;
+}
+
+aside{
+    background-color: lime;
+    order: 1;
+}
+
+article{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    background-color: blueviolet;
+    flex-direction: column;
+}
+
+footer{
+    background-color: plum;
+}
+
+@media screen and (min-width: 1200px) {
+
+    main{
+        flex-direction: row;
+        flex-basis: 60%;
+        flex-grow: 1;
+    }
+    aside{
+        flex-basis: 20%;
+    }
+
+    aside h2{
+        font-size: 1em;
+    }
+    nav{
+        flex-basis: 20%;
+    }
+
+}
