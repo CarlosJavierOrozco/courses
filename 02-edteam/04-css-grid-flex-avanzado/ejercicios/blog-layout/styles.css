@@ -1,0 +1,88 @@
+.page-title{
+    text-transform: capitalize;
+}
+
+.post__main{
+    margin: 1em;
+}
+
+.post{
+    border-bottom: 2px solid #ccc;
+}
+
+.post__content{
+    height: 300px;
+    overflow: hidden;
+    /* por el momento puedo hacerlo asi... ya vere como mejorar el desbordamineto del texto */
+}
+.post img{
+    max-width: 100%;
+}
+.post__title{
+    text-transform: uppercase;
+}
+
+.post__title a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.post__title a:hover{
+    text-decoration: underline;
+}
+
+
+.post__tags,
+.tags{
+    display: flex;
+}
+
+.post__tags{
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.post__tags span{
+    margin: 0 .5em 0 0;
+}
+
+.tags{
+    list-style: none;
+    padding-left: 0;
+
+}
+
+.tags li{
+    margin-right: .5em;
+}
+
+
+.tag{
+    background-color: #ccc;
+    padding: .1em .4em;
+    border-radius: 10px;
+}
+
+
+*{
+    box-sizing: border-box;
+}
+@media screen and (min-width: 800px) {
+    .post{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .post__title{
+        width: 100%;
+    }
+
+    .post__img{
+        width: 40%;
+    }
+
+    .post__content{
+        width: 60%;
+        padding: .5em;
+    }
+}
