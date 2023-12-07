@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.dado{
+    padding: 5px;
+    width: 120px;
+    height: 120px;
+    border: thin solid #333;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    margin-bottom: 1em;
+    background-color: #ddd;
+    
+}
+
+.punto{
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    align-self: center;
+    justify-self: center;
+}
+
+.uno .punto{
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.dos .punto:first-child{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+.dos .punto:last-child{
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+}
+
+.tres .punto:first-child{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+.tres .punto:nth-child(2){
+    grid-row: 2 / 3;
+    grid-column: 2 / 3; 
+}
+.tres .punto:last-child{
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+}
+
+.cuatro .punto:first-child{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+.cuatro .punto:nth-child(2){
+    grid-row: 1 / 2;
+    grid-column: 3 / 4; 
+}
+
+.cuatro .punto:nth-child(3){
+    grid-row: 3 / 4;
+    grid-column: 1 / 2; 
+}
+
+.cuatro .punto:last-child{
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+}
+
+
+.cinco .punto:first-child{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+.cinco .punto:nth-child(2){
+    grid-row: 1 / 2;
+    grid-column: 3 / 4; 
+}
+
+.cinco .punto:nth-child(3){
+    grid-row: 3 / 4;
+    grid-column: 1 / 2; 
+}
+
+.cinco .punto:nth-child(4){
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+}
+
+.cinco .punto:nth-child(5){
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+
+.seis .punto:first-child{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+.seis .punto:nth-child(2){
+    grid-row: 1 / 2;
+    grid-column: 3 / 4; 
+}
+
+.seis .punto:nth-child(3){
+    grid-row: 3 / 4;
+    grid-column: 1 / 2; 
+}
+
+.seis .punto:nth-child(4){
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+}
+
+.seis .punto:nth-child(5){
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+.seis .punto:nth-child(6){
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+}
