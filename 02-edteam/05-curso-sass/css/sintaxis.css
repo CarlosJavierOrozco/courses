@@ -81,3 +81,52 @@ footer .facebook {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
+.banner {
+  font-family: verdana;
+  font-size: 1em;
+  font-weight: 900;
+}
+
+/*
+tipos de datos en sass
+
+numeros
+strings
+colores
+booleans
+null
+lists
+maps
+
+*/
+.data-number {
+  type1: number;
+  type2: number;
+}
+.data-string {
+  type1: string;
+  type2: list;
+  type3: string;
+  type4: string;
+}
+.data-colors {
+  type1: color;
+  type2: color;
+}
+.data-bools {
+  type1: bool;
+  type1: bool;
+}
+.data-null {
+  type: null;
+}
+.data-lists {
+  type1: list;
+  type2: list;
+  type3: list;
+  value: hola mundo, adios mundo;
+  length: 2;
+  length: 4;
+  adios: adios mundo;
+}
