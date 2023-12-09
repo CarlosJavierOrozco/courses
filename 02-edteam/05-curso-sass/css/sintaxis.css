@@ -130,3 +130,40 @@ maps
   length: 4;
   adios: adios mundo;
 }
+.data-maps {
+  type1: map;
+  value: red;
+}
+.data-maps.facebokk {
+  background-color: blue;
+}
+.data-maps.youtube {
+  background-color: red;
+}
+.data-maps.twitter {
+  background-color: stealblue;
+}
+
+.div {
+  background-color: blue;
+}
+
+.sidebar-righ {
+  width: 100%;
+  color: red;
+}
+
+.placeholder, .sidebar-left {
+  width: 100%;
+  color: blue;
+}
+
+main {
+  width: 100vw;
+  color: steelblue;
+}
+
+.footer {
+  width: 100vw;
+  color: steelblue;
+}

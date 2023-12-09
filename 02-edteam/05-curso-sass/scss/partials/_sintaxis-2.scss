@@ -60,4 +60,68 @@ maps
         adios: nth($list1, 2);
 
     }
+
+    &-maps{
+        
+        $networks-colors: (
+            facebokk:blue,
+            youtube: red,
+            twitter: stealblue );
+        type1: type-of($networks-colors);
+        value: map-get($networks-colors, youtube);
+        
+        @each $social, $color in $networks-colors{
+            &.#{$social}{
+                background-color: $color;
+            }
+        }
+    
+    }
+}
+
+
+.div{
+
+    @if type-of($value: "12") == number{
+        background-color: red;
+    }@else{
+        background-color: blue;
+    }
+}
+
+//placeholder
+
+//no se compila
+
+%placeholder{
+    width: 100%;
+    color:red;
+}
+
+@mixin MixinPlaceholder(){
+    width: 100vw;
+    color:steelblue;
+}
+
+.placeholder{
+    width: 100%;
+    color: blue;
+}
+
+.sidebar-righ{
+    @extend %placeholder;
+}
+
+.sidebar-left{
+    @extend .placeholder;
+}
+
+// si va a variar uns un mixin
+
+main{
+    @include MixinPlaceholder();
+}
+
+.footer{
+    @include MixinPlaceholder();
 }
