@@ -1,0 +1,22 @@
+// funciones en sass
+
+
+.data{
+    display: unquote("inline-block");
+    width: percentage(2 / 5);
+    height: round($number: 10/6);
+    font-size: unit($number: 20px);
+    border-width: unitless($number: 20px);
+}
+
+//crear una funcion
+
+@function widthPage($a,$b:5){
+    @return $a + $b
+}
+
+.header{
+    width: widthPage(10em,2);
+}
+
+// pendiete de hacer los otros ejercicios
