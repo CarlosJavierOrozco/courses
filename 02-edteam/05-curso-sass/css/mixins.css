@@ -1,0 +1,30 @@
+.button {
+  width: 2em;
+  line-height: 3;
+  background-color: red;
+}
+.button span {
+  background-color: steelblue;
+  -webkit-box-shadow: 0 0 10px red, 5px 5px 5px white;
+          box-shadow: 0 0 10px red, 5px 5px 5px white;
+}
+
+.menu {
+  list-style-type: disc;
+}
+.menu li {
+  float: left;
+}
+
+.cols-6 {
+  width: 50%;
+}
+
+.box {
+  color: red;
+}
+@media screen and (min-width: 480px) {
+  .box {
+    color: purple;
+  }
+}
