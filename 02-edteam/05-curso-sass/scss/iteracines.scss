@@ -1,0 +1,14 @@
+//condicionales
+
+@mixin grid($child,$number){
+    display: flex;
+    flex-wrap: wrap;
+
+    .#{$child}{
+        width: (100% / $number);
+    }
+}
+
+.grid {
+    @include grid(grid-item, 4 )
+}
