@@ -1,0 +1,33 @@
+img{
+    width: 100%;
+}
+
+body{
+    background-color: #252425;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+.card-box{
+    width: 360px;
+    height: 640px;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+
+    background-image: linear-gradient(to bottom,#B2ACAE,#6A6466);
+}
+
+.card{
+    min-height: 300px;
+    width: 340px;
+
+    margin: 15px auto 0;
+    background-color: transparent;
+}
+
+a img{
+    display: block;
+   
+}

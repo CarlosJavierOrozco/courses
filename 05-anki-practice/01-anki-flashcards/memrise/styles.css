@@ -1,0 +1,113 @@
+/*
+styles to copy directly to anki
+*/
+*{
+    box-sizing: border-box;
+}
+.card{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #D9CECE;
+}
+.header{
+    display: flex;
+    height: 70px;
+    background-color: #2B3648;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    margin-bottom: auto;
+    margin-top: 0;
+}
+.logo{
+    width: 50px;
+}
+
+.lang{
+    text-transform: uppercase;
+    color: white;
+    font-weight: 900;
+    font-size: 25px;
+}
+
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 10px;
+}
+
+.title img{
+    width: 40px;
+}
+
+.title h2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #2B3648;
+    width: 100%;
+}
+
+.myLang{
+    width: 100%;
+    font-size: 30px;
+}
+
+.myLang h3{
+    text-align: center;
+    text-transform: uppercase;
+    color: #2B3648;
+}
+
+
+
+.answer .title{
+    justify-content: center;
+}
+
+.answer h2 {
+    margin-left: 1em;
+    width: auto;
+}
+
+.mp3,
+.mp4{
+    width: 90%;
+    background-color: #859F9A;
+    margin: .5em auto;
+    display: flex;
+    padding: .5em;
+    border-radius: 15px;
+}
+
+.mp4{
+    background-color: #D2989C;
+}
+
+.mp3 img,
+.mp4 img{
+    width: 30px;
+}
+
+.play{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;  
+    padding-right: .5em; 
+
+}
+.media{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+
+.media img {
+    margin: .2em .3em;
+}
+
