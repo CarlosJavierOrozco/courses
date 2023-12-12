@@ -1,12 +1,16 @@
 /*
 styles to copy directly to anki
 */
+
+@import url(_normalize.css);
 *{
     box-sizing: border-box;
 }
+
 .card{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #D9CECE;
+    min-height: 100vh;
 }
 .header{
     display: flex;
@@ -77,13 +81,14 @@ styles to copy directly to anki
 .mp4{
     width: 90%;
     background-color: #859F9A;
-    margin: .5em auto;
+    margin: 2em auto 1em;
     display: flex;
     padding: .5em;
     border-radius: 15px;
 }
 
 .mp4{
+    margin-top: 1em;
     background-color: #D2989C;
 }
 
@@ -111,3 +116,51 @@ styles to copy directly to anki
     margin: .2em .3em;
 }
 
+
+.hr{
+    max-width: 600px;
+    display: block;
+    margin: auto;
+}
+
+@media screen and (min-width: 810px) {
+    
+    .header{
+        width: 70%;
+        margin: auto;
+    }
+    .title{
+        width: 70%;
+        margin: auto;
+    }
+    
+    .hr{
+        width: 65%;
+    }
+
+
+    .mp3,
+    .mp4{
+        width: 70%;
+    }
+
+}
+
+
+@media screen and (min-width: 1200px) {
+    
+    .header{
+        max-width: 800px;
+        margin: auto;
+    }
+    .title{
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .mp3,
+    .mp4{
+        max-width: 800px;
+    }
+
+}
