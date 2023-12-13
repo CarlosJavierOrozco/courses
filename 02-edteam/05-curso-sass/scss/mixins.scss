@@ -1,0 +1,28 @@
+@mixin button($size:1em,$shadow...){
+    width: $size;
+    line-height: 3;
+    background-color: red;
+    span{
+        background-color: steelblue;
+        box-shadow: $shadow;
+    }
+}
+
+.button{
+    @include button(2em,0 0 10px red,5px 5px 5px white)
+}
+
+@mixin menu(){
+    list-style-type: disc;
+    @content;
+}
+
+.menu {
+    @include menu(){
+        li {
+            float: left;
+        }
+    }
+}
+
+@import "partials/grid-system"

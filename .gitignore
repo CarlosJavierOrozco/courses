@@ -1,8 +1,10 @@
 *.cfg
 *.jpg
+*.jpeg
 *.png
 *.config
 *.svg
 *.mp4
 *.mp3
 dist/
+*.pdf

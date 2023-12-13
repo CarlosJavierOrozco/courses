@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h1{
+    width: 100%;
+}
+
+.dado{
+    margin: 1em;
+    padding: 5px;
+    width: 120px;
+    height: 120px;
+    border: thin solid #333;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    margin-bottom: 1em;
+    background-color: #ddd;
+    
+}
+
+.punto{
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    align-self: center;
+    justify-self: center;
+}
+
+.p1{
+    grid-area: 1 / 1 
+}
+
+.p2{
+    grid-area: 1 / 2;
+}
+
+.p3{
+    grid-area: 1 / 3;
+}
+
+.p4{
+    grid-area: 2 / 1;
+}
+
+.p5{
+    grid-area: 2 / 2;
+}
+
+.p6{
+    grid-area: 2 / 3;
+}
+
+.p7{
+    grid-area: 3 / 1;
+}
+
+.p8{
+    grid-area: 3 / 2;
+}
+
+.p9{
+    grid-area: 3 / 3;  
+}

@@ -1,0 +1,127 @@
+// realmente no lo veo tan util.... 
+.banner{
+    font:{
+        family: verdana;
+        size: 1em;
+        weight: 900;
+    }
+}
+
+/*
+tipos de datos en sass
+
+numeros
+strings
+colores
+booleans
+null
+lists
+maps
+
+*/
+
+
+.data{
+    &-number{
+        type1: type-of($value: 20pixeles);
+        type2: type-of($value: 20 * 1px);
+    }
+
+    &-string{
+        type1: type-of($value: cadena);
+        type2: type-of($value: cadena de texto);
+        type3: type-of($value: "cadena de texto");
+        type4: type-of($value: 100 + px);
+    }
+
+    &-colors{
+        type1: type-of($value: white);
+        type2: type-of($value: hsl(200,50%,60%));
+    }
+
+    &-bools{
+        type1: type-of($value: 10 > 5);
+        type1: type-of($value: true);
+    }
+
+    &-null{
+        type: type-of($value: null);
+    }
+
+    &-lists{
+        $list1: hola mundo, adios mundo;
+        $list2: hola mundo adios mundo;
+        type1: type-of($value: 20 50 60 70);
+        type2: type-of($value: hola mundo);
+        type3: type-of($list1);
+        value: $list1;
+        length: length($list1);
+        length: length($list2);
+        adios: nth($list1, 2);
+
+    }
+
+    &-maps{
+        
+        $networks-colors: (
+            facebokk:blue,
+            youtube: red,
+            twitter: stealblue );
+        type1: type-of($networks-colors);
+        value: map-get($networks-colors, youtube);
+        
+        @each $social, $color in $networks-colors{
+            &.#{$social}{
+                background-color: $color;
+            }
+        }
+    
+    }
+}
+
+
+.div{
+
+    @if type-of($value: "12") == number{
+        background-color: red;
+    }@else{
+        background-color: blue;
+    }
+}
+
+//placeholder
+
+//no se compila
+
+%placeholder{
+    width: 100%;
+    color:red;
+}
+
+@mixin MixinPlaceholder(){
+    width: 100vw;
+    color:steelblue;
+}
+
+.placeholder{
+    width: 100%;
+    color: blue;
+}
+
+.sidebar-righ{
+    @extend %placeholder;
+}
+
+.sidebar-left{
+    @extend .placeholder;
+}
+
+// si va a variar uns un mixin
+
+main{
+    @include MixinPlaceholder();
+}
+
+.footer{
+    @include MixinPlaceholder();
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLASE 06</title>
+</head>
+<body>
+  <h1>WEB API</h1> 
+  <h2>video y audio</h2>
+
+  <video src="../video.mp4" id="video"></video>
+  <button id="playPause">></button>
+  <input type="range" name="vol" id="vol">
+  <div id="time">00</div>
+
+  <h2>canvas</h2>
+  <canvas id="myCanvas1" width="500" height="300"></canvas>
+  <canvas id="myCanvas2" width="500" height="300"></canvas>
+  <canvas id="myCanvas3" width="500" height="300"></canvas>
+  
+  <script src="clase06.js"></script>
+  <style>
+    div#time{
+      display: inline;
+    }
+    canvas{
+      border: thin solid black;
+    }
+
+    video{
+      max-width: 100%;
+    }
+  </style>
+</body>
+</html>

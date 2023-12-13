@@ -1,0 +1,30 @@
+.nav{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    right: 0;
+    background-color: #ddd;
+    width: 25%;
+    overflow-y: auto;
+}
+
+.ul{
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    & li{
+        border-bottom: 1px solid rgb(146, 146, 146);
+    }
+    & a{
+        display: block;
+        line-height: 3;
+        color: darkslategray;
+        padding-left: 1em;
+    }
+}
+
+
+.container{
+    margin-right: 27%;
+}

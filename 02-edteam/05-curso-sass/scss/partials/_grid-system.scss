@@ -1,0 +1,22 @@
+@mixin grid($cols){
+    width: percentage($cols / 12);
+}
+
+.cols-6{
+    @include grid(6)
+}
+
+@mixin mq($min-width){
+    @media screen and (min-width: $min-width) {
+        @content;
+    }
+}
+
+
+.box{
+    color: red;
+
+    @include mq(480px){
+        color: purple;
+    }
+}

@@ -1,0 +1,1 @@
+export const nacimiento = new Date(1991,3,26)

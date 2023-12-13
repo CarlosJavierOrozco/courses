@@ -1,0 +1,111 @@
+<html>
+	<head>
+		<title>Formulario</title>
+		<meta charset="UTF-8">
+		
+		<script type="text/javascript">
+			
+			function register(){
+			
+				var x = new Array();
+				x[0] = document.getElementById("name").value;
+				x[1] = document.getElementById("lname").value;
+				x[2] = document.getElementById("email").value;
+				x[3] = document.getElementById("pass").value;
+				x[4] = document.getElementById("cpass").value;
+
+        var h = new Array();
+
+        h[0] = "<span style='color: red;'>Escribe tu nombre</span>"
+        h[1] = "<span style='color: red;'>Escribe tu apellido</span>"
+        h[2] = "<span style='color: red;'>Escribe tu email</span>"
+        h[3] = "<span style='color: red;'>Escribe tu contraseña</span>"
+        h[4] = "<span style='color: red;'>Confirma tu contraseña</span>"
+
+
+        var divs = new Array("mname","mlname","memail","mpass","mcpass");
+
+          for (var i in x) {
+
+            var error = h[i];
+            var div = divs[i];
+
+            if (x[i] == "") {
+              document.getElementById(div).innerHTML = error;
+            }else{
+              document.getElementById(div).innerHTML = "OK!";
+            }
+          }
+
+
+//      Se podria sacar esto en otra funcion pero no me sale como el tutorial asi que tuve que meterla en esta funcion. Luego la sacare y lo hare mejor por el momento no tengo la habilidad.
+
+        var first = document.getElementById("pass").value;
+        var second = document.getElementById("cpass").value;
+
+        if(second==first){
+          document.getElementById("mcpass").innerHTML = "coinciden!";
+        if(second==""){
+             document.getElementById("mcpass").innerHTML = "<span style='color: red;'>Confirma tu contraseña</span>"
+           }
+
+        if(first==""){
+             document.getElementById("mpass").innerHTML = "<span style='color: red;'>Escribe tu contraseña</span>"
+           }
+        }else{
+          document.getElementById("mcpass").innerHTML = "<span style='color: red;'>Tus contraseñas no coinciden</span>";
+        }
+/////////////////////////////////////////////////////////////////////////////////////////
+			}
+
+
+      function pass(){
+
+          // en esta funcion iria la confirmacion de contraseña. Pero no me sale. 
+
+      }
+			
+		</script>
+		
+	</head>
+	<body>
+		
+		<form>
+			
+			<table border=1>
+				<tr>
+					<td>Nombre:</td>
+					<td><input type="text" name="name" id="name" onkeyup="register()" /></td>
+          <td><div id="mname"></div></td>
+				</tr>
+				
+				<tr>
+					<td>Apellido:</td>
+					<td><input type="text" name="lname" id="lname" onkeyup="register()" /></td>
+          <td><div id="mlname"></div></td>
+				</tr>
+				
+				<tr>
+					<td>Email</td>
+					<td><input type="text" name="email" id="email" onkeyup="register()" /></td>
+          <td><div id="memail"></div></td>
+				</tr>
+				
+				<tr>
+					<td>Contraseña:</td>
+					<td><input type="text" name="pass" id="pass" onkeyup="register()" /></td>
+          <td><div id="mpass"></div></td>
+				</tr>
+				
+				<tr>
+					<td>Confirmacion de Contraseña</td>
+					<td><input type="text" name="cpass" id="cpass" onkeyup="register()" /></td>
+          <td><div id="mcpass"></div></td>
+				</tr>
+			</table>
+		
+			<input type="button" name="submit" value="Enviar" onclick="register()"/>
+		</form>
+
+	</body>
+</html>

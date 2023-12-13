@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios del DOM</title>
+  <link rel="stylesheet" href="../css/hamburgers.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-dark>
+  <header class="header">
+    <h1>Menu Hamburguesa</h1>
+  </header>  
+
+  <button class="panel-btn btn hamburger hamburger--emphatic" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+
+  <aside class="panel">
+    <nav class="menu">
+      <a href="#seccion1">Reloj Digital y Alarma</a>
+      <a href="#seccion2">eventos del teclado</a>
+      <a href="#seccion3">cuenta regresiva</a>
+      <a href="#seccion4">Sección 4</a>
+      <a href="#seccion5">Sección 5</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section id="seccion1" class="section">
+      <h2>Reloj Digital y Alarma Sonora</h2>
+      <div id="reloj"></div>
+      <div>
+        <button id="activar-reloj">iniciar reloj</button>
+        <button id="desactivar-reloj">detener reloj</button>
+        <button id="activar-alarma">iniciar alarmar</button>
+        <button id="desactivar-alarma">detener alarma</button>
+      </div>
+    </section>
+    <section id="seccion2" class="section">
+      
+      <h2>eventos del teclado</h2>
+      <article class="stage" data-dark>
+        <div class="ball" data-dark></div>
+      </article>
+
+    </section>
+    <section id="seccion3" class="section">
+      <h2>cuenta regresiva</h2>
+      <div id="countdown"></div>
+    </section>
+    <section id="seccion4" class="section">
+      <h2>Seccion 4</h2>
+    </section>
+    <section id="seccion5" class="section">
+      <h2>Seccion 5</h2>
+    </section>
+  </main>
+  <button class="scroll-top-btn hidden btn">&#11014;</button>
+  <button class="dark-theme btn">🌙</button>
+
+
+
+
+  <script src="../js/index_dom.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+.sphere-container{
+    perspective: 10000px;
+    position: relative;
+
+}
+
+// luego busco como hacer un ciclo en sass 
+
+.circle-sphere{
+    position: absolute;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    animation: sphere .2s infinite linear;
+    box-shadow: 0 0 2px 2px red;
+    &:nth-child(2){
+        transform: rotateY(40deg);
+    }
+    &:nth-child(3){
+        transform: rotateY(80deg);
+    }
+    &:nth-child(4){
+        transform: rotateY(120deg);
+    }
+    &:nth-child(5){
+        transform: rotateY(160deg);
+    }
+    &:nth-child(6){
+        transform: rotateY(200deg);
+    }
+    &:nth-child(7){
+        transform: rotateY(240deg);
+    }
+    &:nth-child(8){
+        transform: rotateY(280deg);
+    }
+    &:nth-child(9){
+        transform: rotateY(320deg);
+    }
+
+}
+
+@keyframes sphere {
+    to{
+        transform: rotateY(1turn);
+    }
+}

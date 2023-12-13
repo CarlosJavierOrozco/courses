@@ -1,0 +1,31 @@
+.luffy-scale-container.scale2{
+    overflow: hidden;
+    position: relative;
+    &::before{
+        content: "";
+        border-radius: 50%;
+        top: 100%;
+        left: -100%;
+        transition: all .60s;
+    }
+    &::after{
+        content: "Luffy Kun";
+        position: absolute;
+        top: 50%;
+        left: -100%;
+        transition: all .90s;
+    }
+    &:hover::after{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        font-size: 2em;
+        color: rgb(114, 5, 27);
+        z-index: 20;
+    }
+    &:hover::before{
+        transform: scale(5)
+
+    }
+}
