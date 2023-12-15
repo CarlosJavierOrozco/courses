@@ -1,6 +1,6 @@
 //propiedades dinamicas
 
-const esposas = ["Mariyen","Elisabeth","Yosleina"];
+const esposas = ["Mariyen","Elisabeth","Yosleinas"];
 
 const wives = {};
 
@@ -24,4 +24,23 @@ for (const iterator of yields) {
   console.log(iterator);
 }
 
-const arr = [...generador()]
+const arr = [...generador()];
+
+
+// funciones autoejecutables
+
+(function (d) {
+  console.log(d)
+})(document);
+
+
+//iteradores
+
+console.log("iteradores")
+const i = esposas[Symbol.iterator]()
+
+
+console.log(i.next())
+console.log(i.next())
+console.log(i.next())
+console.log(i.next())
