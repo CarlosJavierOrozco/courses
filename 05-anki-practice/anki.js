@@ -1,61 +1,107 @@
-//Funcion constructora
+let prop = "size"
 
-/*function Perro(n,r,t){
-  this.super = Animal
-  this.super(n,r)
-  this.tamanio = t
+const pokemon = {
+  nombre: "",
+  tipo: "",
+  atacar: function(){
+    console.log("pow pow")
+  },
+  [prop]: true
 }
 
-Perro.prototype = new Animal
-Perro.prototype.constructor = Perro
-*/
 
-//cortocircuito and
-console.log(false && "derecha")
+pokemon.atacar()
+console.log(pokemon.small)
 
-//variables. 
-
-const $bgColor = window.getComputedStyle(document.documentElement).getPropertyValue("--bg-color")
-const $fontSize = window.getComputedStyle(document.documentElement).getPropertyValue("--font-size")
-
-console.log($bgColor)
-console.log($fontSize)
-
-//setear valores 
-document.body.style.backgroundColor = $bgColor
-
-//accder a una clase css
-
-let $primerParrafo = document.getElementById("primerParrafo")
+// pikachu tiene el metodo atacar de los pokemon
+const pikachu = {
+  atacar: pokemon.atacar.bind(pokemon)
+}
 
 
-console.log($primerParrafo.classList)
-console.log($primerParrafo.classList.contains("miClase") + " si tiene la clase")
-console.log($primerParrafo.getAttribute("class"))
-console.log($primerParrafo.className) // al parecer estas dos ultimas hacen lo mismo con las clases
+pikachu.atacar()
+
+//meter una propiedad dinamica
 
 
-$primerParrafo.classList.replace("miClase","claseReemplazada")
+//Crear una lista añadiendoles los elementos "li" con textContent, innerHTML y fragment. 
 
-console.log($primerParrafo.className) 
+let usuarios = ["carlos","nami","boa","luffy","zoro"]
+let $ul = document.createElement("ul")
 
 
-//textos
+usuarios.forEach((el)=>{
+  let $li = document.createElement("li")
+  $li.textContent = el
+  $ul.appendChild($li)
 
-let text = `
-    <p>
-    El Modelo de Objetos del Documento (<b><i>DOM - Document Object Model </i></b>) es un                    
-API para documentos HTML y XML.
-    </p>
-    <p>
-    Éste provée una representación estructural del documento, permitiendo modificar su contenido y presentación visual mediante código JS.
-    </p>
-    <p>
-        <mark> El DOM no es parte de la especificación de JavaScript, es una API para los navegadores.</mark>
-    </p>
-`
+})
 
-$primerParrafo.innerHTML = text
-$primerParrafo.outerHTML = text // para este caso es mejor
-//$primerParrafo.innerText = text
-//$primerParrafo.textContent = text
+document.body.appendChild($ul)
+
+const hermanas = ["Mary","Pelua","Maye"]
+let $ul2 = document.createElement("ul")
+
+hermanas.forEach((el)=>{
+  $ul2.innerHTML += `<li>${el}</li>`
+})
+
+document.body.appendChild($ul2)
+
+
+// usar fragment
+
+const meses = ["enero","febrero","marzo"]
+let $ul3 = document.createElement("ul")
+let $fragment = document.createDocumentFragment()
+
+meses.forEach((el)=>{
+  let $li = document.createElement("li")
+  $li.textContent = el
+  $fragment.appendChild($li)
+})
+
+
+$ul3.appendChild($fragment)
+
+document.body.appendChild($ul3)
+
+
+let $ulList = document.getElementById("ul")
+//let $el = document.createElement("li") 
+let $el = "<li>li insertada como HTML</li>"
+//$el.style.color = "red"
+//$el.textContent = "elemento insertado"
+
+
+$ulList.insertAdjacentHTML("beforeend",$el)
+
+
+let cloneUlList = $ulList.cloneNode(true)
+
+
+document.body.appendChild(cloneUlList)
+
+//delegacion de eventos. 
+
+document.addEventListener('click',(e)=>{
+
+  if(e.target.matches("p")){
+    alert("hiciste click en un parrafo")
+    e.stopPropagation() //no se detiene la propagacion??? 
+  }
+
+  alert("hiciste click en culquier otro lado")
+
+})
+
+//ejemplo basico propiedad dinamica. 
+
+let users = ["carlos","tutis","holisofi"]
+let objUsers = {}
+
+users.forEach((u,i)=>{
+  objUsers[`ID_${i}`] = u
+})
+
+console.log(objUsers)
