@@ -4,9 +4,18 @@ public class Variables {
 	public static void main(String[] args) {
 		//iniciar variables
 		byte edad;
-		edad = 32;
+		edad = 32;		
+		System.out.println(edad);
+		/* comentario en
+		 * varias lineas
+		 * como en css
+		 * */
 		
-		System.out.print(edad);
+		//iniciar constante
+		final double pi = 3.14;
+		
+		System.out.println(pi);
+		
 	}
 
 }
