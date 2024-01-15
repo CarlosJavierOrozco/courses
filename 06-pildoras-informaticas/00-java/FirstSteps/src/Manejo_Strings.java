@@ -4,6 +4,7 @@ public class Manejo_Strings {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String nombre = "Carlos";
+		String frase = "Hoy es un muy buen dia para programar";
 		
 		System.out.println("Mi nombre es " + nombre);
 		
@@ -14,6 +15,17 @@ public class Manejo_Strings {
 		int ultima_letra = nombre.length();
 		
 		System.out.println("La ultima letra es la " + nombre.charAt(ultima_letra - 1));
+	
+		String frase_corta = frase.substring(1,3);
+		
+		System.out.println(frase_corta);
+		
+		System.out.println(nombre.equals(frase));
+		System.out.println(nombre.equalsIgnoreCase(frase));
+	
+	
+	
+	
 	}
 
 }
