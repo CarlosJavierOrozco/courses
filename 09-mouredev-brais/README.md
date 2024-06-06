@@ -14,3 +14,7 @@ touch .gitignore
 Con esto me da igual donde este ese fichero.
 
 **/.DS_Store 
+
+## prueba de GIT DIFF
+
+
