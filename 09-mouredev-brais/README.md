@@ -37,3 +37,7 @@ Historial completo de interacciones
 Al hacer un reset HARD al commit que deseamos volver es suficiente! 
 
 con gitreflog vemos el commit queremos y que borramos con reset hard y luego hacemos un reset hard a ese commit.. es cuestion de verlo en la practica. 
+
+## git tag
+
+git checkout tags/clase_1 me desplazo a esta etiqueta
