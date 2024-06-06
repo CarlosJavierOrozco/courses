@@ -48,3 +48,7 @@ git checkout tags/clase_1 me desplazo a esta etiqueta
 git switch es para cambiar de rama. Aparentemente hace lo mismo que checkout en este contexto de ramas.
 
 
+## git merge 
+
+Luego de resolver un conflicto se debera hacer un commit para completar el "merge"
+
