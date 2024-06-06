@@ -17,4 +17,23 @@ Con esto me da igual donde este ese fichero.
 
 ## prueba de GIT DIFF
 
+## Desplazamiento en una rama
 
+- mouredev
+- braismoure
+- Abiezerk
+- agustinlopezdev
+- geroschmidt
+- javicb
+- erickvr2k
+- Alexis033
+- LilyMilano
+- _CarlosJavierOrozco_
+
+## git reflog
+
+Historial completo de interacciones
+
+Al hacer un reset HARD al commit que deseamos volver es suficiente! 
+
+con gitreflog vemos el commit queremos y que borramos con reset hard y luego hacemos un reset hard a ese commit.. es cuestion de verlo en la practica. 
