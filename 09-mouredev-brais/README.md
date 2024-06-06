@@ -41,3 +41,10 @@ con gitreflog vemos el commit queremos y que borramos con reset hard y luego hac
 ## git tag
 
 git checkout tags/clase_1 me desplazo a esta etiqueta
+
+
+## git branch y git switch 
+
+git switch es para cambiar de rama. Aparentemente hace lo mismo que checkout en este contexto de ramas.
+
+
