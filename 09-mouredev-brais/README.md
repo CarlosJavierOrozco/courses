@@ -63,3 +63,8 @@ git stash pop
 eliminar un stash
 
 git stash drop
+
+## git remote 
+
+git remote add origin "repositorio en github.git"
+git push -u origin main
