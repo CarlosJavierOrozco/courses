@@ -68,3 +68,10 @@ git stash drop
 
 git remote add origin "repositorio en github.git"
 git push -u origin main
+
+## git fetch - git pull
+
+con git fetch se descarga el historial sin los cambios. Solo el log. 
+
+con git pull se descarga todo.
+
