@@ -85,3 +85,15 @@ Iniciar una nueva modalidad en la app
 1. git flow feature start MoureDev-GIT
 2. git flow feature finish MoureDev-GIT
 
+## git cherry-pick y git rebase
+
+cherry-pick nos da la posibilidad de irnos a un commit en concreto y traernoslo
+
+git cherry-pick id-hash
+git cherry-pick --continue
+git cherry-pick --abort
+
+Git rebase no trae una rama a un punto en concreto
+git rebase 
+
+_Todo esto con mucho cuidado_
