@@ -52,3 +52,14 @@ git switch es para cambiar de rama. Aparentemente hace lo mismo que checkout en 
 
 Luego de resolver un conflicto se debera hacer un commit para completar el "merge"
 
+## git stash 
+
+Un commit que solo queda reflejado en tu local. Cuando al moverte a una rama git te pide que hagas commit o un stash. No lo sabia.
+
+recuperame lo que hice stash
+
+git stash pop
+
+eliminar un stash
+
+git stash drop
