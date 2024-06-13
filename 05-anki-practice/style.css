@@ -1,26 +1,32 @@
-p{
-    color: coral;
-    font-size: large;
-    text-transform: uppercase;
-}
-
-
-.tabla, .tabla td, .tabla th {  
+.tabla,
+.tabla > tbody > tr > td,
+.tabla > tbody > tr > th{  
+  color: aliceblue;
   border: 1px solid #ddd;
-  text-align: left;
-  border-collapse: collapse;
-  width: 60%;
 }
 
+.tabla{
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 80%;
+}
 
-.tabla th, .tabla td {
-  padding: 15px;
+.tabla td, th{
+    width: fit-content;
+}
+
+.tabla > tbody > tr > th,
+.tabla > tbody > tr > td {
+  padding: 10px 20px;
 }
 
 
 .tabla a{
   cursor: pointer;
 }
-.tabla tr:nth-child(odd) {background-color: #666666;}
-.tabla tr:nth-child(even) {background-color: #444444;}
-.tabla tr:hover {background-color: rgb(151, 185, 151); color:rgb(83, 23, 23);}
+.tabla > tbody > tr:nth-child(odd) {background-color: #666666;}
+.tabla > tbody > tr:nth-child(even) {background-color: #444444;}
+.tabla > tbody > tr:hover {background-color: rgb(151, 185, 151); color:rgb(83, 23, 23);}
+
+
