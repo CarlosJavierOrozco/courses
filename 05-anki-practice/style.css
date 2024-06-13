@@ -5,24 +5,22 @@ p{
 }
 
 
-table, td, th {  
+.tabla, .tabla td, .tabla th {  
   border: 1px solid #ddd;
   text-align: left;
-}
-
-table {
   border-collapse: collapse;
-  width: 100%;
+  width: 60%;
 }
 
-th, td {
+
+.tabla th, .tabla td {
   padding: 15px;
 }
 
 
-a{
+.tabla a{
   cursor: pointer;
 }
-tr:nth-child(odd) {background-color: #666666;}
-tr:nth-child(even) {background-color: #444444;}
-tr:hover {background-color: rgb(151, 185, 151); color:rgb(83, 23, 23);}
+.tabla tr:nth-child(odd) {background-color: #666666;}
+.tabla tr:nth-child(even) {background-color: #444444;}
+.tabla tr:hover {background-color: rgb(151, 185, 151); color:rgb(83, 23, 23);}
