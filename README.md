@@ -1,4 +1,4 @@
 # the courses I have taken
 
-_Git from Scratch by Daniel Romero_ 
-_Git & Gihub by JonMircha_
+1. _Git from Scratch by Daniel Romero_ 
+2. _Git & Gihub by JonMircha_
