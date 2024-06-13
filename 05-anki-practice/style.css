@@ -1,3 +1,5 @@
-:root{
-  --font-size: 4em;
+p{
+    color: coral;
+    font-size: large;
+    text-transform: uppercase;
 }
