@@ -1,0 +1,37 @@
+.courses{
+    background-color: rgba(53, 36, 100, 0);
+}
+.main-title{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.academys{
+    display: flex;
+    flex-direction: column;
+}
+
+.academy-name{
+    text-transform: uppercase;
+}
+
+.academy-logo{
+    width: 80%;
+}
+
+
+.card{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: .5em;
+    background-color: rgb(27, 79, 156);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:nth-child(odd){
+    color: white;
+    background-color: rgb(5, 30, 68);
+}
