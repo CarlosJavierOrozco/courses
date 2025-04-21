@@ -1,9 +1,0 @@
-body {
-  display: flex;
-  flex-direction: column;
-
-}
-
-div {
-  transform: skew(10deg);
-}
